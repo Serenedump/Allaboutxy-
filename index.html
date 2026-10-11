@@ -4,13 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Xyriel Manabat — Dossier</title>
+<meta name="description" content="Unofficial fan dossier for Xyriel Manabat: bio, timeline, filmography, clippings and fan projects.">
+<meta name="theme-color" content="#170f22">
+<meta property="og:title" content="Xyriel Manabat — Dossier"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://allaboutxyrielmanabat.netlify.app/images/18th-rose-2026.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&family=Bebas+Neue&family=Pacifico&family=Caveat&family=Space+Grotesk:wght@300;500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
 <style>
 :root{--ink:#170f22;--ink2:#22162f;--line:#3a2a4d;--rose:#ff4f8b;--rose2:#ffb3cf;--blue:#7b8cff;--text:#f1e9f7;--mute:#a595b8;
---serif:'Gloock',Georgia,serif;--sans:'Outfit',system-ui,sans-serif}
+--serif:'Gloock',Georgia,serif;--sans:'Outfit',system-ui,sans-serif;--soft:color-mix(in srgb,var(--text) 80%,var(--ink));--deep:color-mix(in srgb,var(--ink) 65%,#000)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:64px}
 body{background:var(--ink);color:var(--text);font:300 var(--fs,17px)/1.65 var(--sans);-webkit-font-smoothing:antialiased}
@@ -22,25 +26,15 @@ section{padding:84px 0}
 h2{font:400 clamp(30px,5vw,46px)/1.1 var(--serif);margin-bottom:28px}
 p{max-width:62ch}
 
-/* intro */
-#intro{position:fixed;inset:0;z-index:99;background:#0b0612;display:grid;place-items:center;text-align:center;transition:opacity .6s,visibility .6s}
-#intro.off{opacity:0;visibility:hidden}
-#intro .box{font-family:ui-monospace,Menlo,monospace;color:var(--rose2);font-size:14px;padding:20px}
-#intro h1{font:400 clamp(30px,8vw,56px)/1 var(--serif);color:var(--text);margin-bottom:22px;letter-spacing:.02em}
-#intro .bar{width:min(300px,70vw);height:6px;margin:18px auto;background:var(--line);border-radius:3px;overflow:hidden}
-#intro .bar i{display:block;height:100%;width:0;background:var(--rose);animation:load 2.4s steps(12) forwards}
-@keyframes load{to{width:100%}}
-#intro button{margin-top:14px;background:none;border:1px solid var(--line);color:var(--mute);padding:6px 14px;border-radius:99px;font:inherit;cursor:pointer}
-
 /* nav */
-nav{position:sticky;top:0;z-index:10;background:rgba(23,15,34,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--ink) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;gap:22px;align-items:center;height:56px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
 nav b{font:400 18px var(--serif);color:var(--rose);margin-right:auto}
 nav a{text-decoration:none;color:var(--mute);font-size:15px}
 nav a:hover{color:var(--text)}
 
 /* hero */
-.hero{padding:70px 0 90px;background:radial-gradient(900px 500px at 85% 20%,rgba(255,79,139,.22),transparent 60%),radial-gradient(700px 500px at 0 100%,rgba(123,140,255,.16),transparent 60%)}
+.hero{padding:70px 0 90px;background:radial-gradient(900px 500px at 85% 20%,color-mix(in srgb,var(--rose) 22%,transparent),transparent 60%),radial-gradient(700px 500px at 0 100%,color-mix(in srgb,var(--blue) 16%,transparent),transparent 60%)}
 .hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
 .hero h1{font:400 clamp(54px,11vw,128px)/.9 var(--serif);letter-spacing:-.02em}
 .hero h1 span{display:block;color:transparent;-webkit-text-stroke:1.5px var(--rose);}
@@ -81,9 +75,9 @@ nav a:hover{color:var(--text)}
 .card img{aspect-ratio:4/3;object-fit:cover;width:100%;background:var(--line)}
 .card div{padding:22px}
 .pill{display:inline-block;background:var(--rose);color:#fff;font-size:13px;font-weight:600;padding:3px 12px;border-radius:99px;margin-bottom:10px}
-.pill.b{background:var(--blue);color:#12102a}
+.pill.b{background:var(--blue);color:var(--ink)}
 .card h3{font:400 28px/1.15 var(--serif);margin-bottom:8px}
-.card p{font-size:16px;color:#d6cae4}
+.card p{font-size:16px;color:var(--soft)}
 .card small{display:block;margin-top:12px;color:var(--mute)}
 
 /* filmography */
@@ -94,10 +88,10 @@ nav a:hover{color:var(--text)}
 .film li em{display:block;font-style:normal;color:var(--mute);font-size:13px}
 
 /* film strip */
-.strip{background:#0b0612;border-block:1px solid var(--line);padding:30px 0}
+.strip{background:var(--deep);border-block:1px solid var(--line);padding:30px 0}
 .reel{display:flex;gap:14px;overflow-x:auto;padding:26px 22px;scroll-snap-type:x mandatory;background:
- repeating-linear-gradient(90deg,#2a1d3a 0 14px,transparent 14px 28px) top/100% 10px no-repeat,
- repeating-linear-gradient(90deg,#2a1d3a 0 14px,transparent 14px 28px) bottom/100% 10px no-repeat}
+ repeating-linear-gradient(90deg,var(--line) 0 14px,transparent 14px 28px) top/100% 10px no-repeat,
+ repeating-linear-gradient(90deg,var(--line) 0 14px,transparent 14px 28px) bottom/100% 10px no-repeat}
 .reel figure{flex:0 0 min(300px,78vw);scroll-snap-align:center;margin:6px 0}
 .reel img{height:380px;width:100%;object-fit:cover;border-radius:3px;filter:saturate(.9);background:var(--line)}
 .reel figcaption{margin-top:10px;font-size:14px;color:var(--mute)}
@@ -107,6 +101,13 @@ footer{padding:50px 0 70px;color:var(--mute);font-size:14px;text-align:center}
 footer b{color:var(--rose2);font-weight:400}
 
 
+.alt{background:var(--ink2);border-block:1px solid var(--line)}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.vid{position:relative;margin:0;background:var(--ink2);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.vb{aspect-ratio:16/9;background:#000}
+.vb iframe,.vb video{width:100%;height:100%;border:0;display:block;object-fit:contain}
+.vb.link{display:grid;place-items:center}.vb.link a{color:var(--rose2);font-size:18px}
+.vid figcaption{padding:12px 16px;font-size:15px;color:var(--soft)}
 /* editor */
 .ctl{display:none}body.ed .ctl{display:inline-flex}
 .btn{background:var(--rose);color:#fff;border:0;border-radius:99px;padding:8px 16px;font:600 14px var(--sans);cursor:pointer}
@@ -131,8 +132,12 @@ body.ed #ep{display:block}
 .ann.pin{border-color:var(--rose)}
 .upd time,.ann time{color:var(--rose2);font-weight:600;font-size:14px}
 .upd h3,.ann h3{font:400 22px/1.2 var(--serif);margin:4px 0}
-.upd p,.ann p{color:#d6cae4;font-size:16px}
+.upd p,.ann p{color:var(--soft);font-size:16px}
 .upd a{color:var(--rose2)}
+.pic{display:block;width:100%;max-height:360px;object-fit:cover;border-radius:10px;margin:8px 0}
+.film li.haspic{grid-template-columns:48px 56px 1fr}
+.film li .pic{width:56px;height:76px;max-height:none;margin:0;border-radius:6px}
+body{background-image:var(--pgimg,none);background-size:cover;background-position:center;background-attachment:fixed}
 @media(max-width:820px){
  section{padding:60px 0}
  .hero .wrap,.bio .wrap,.show,.film{grid-template-columns:1fr}
@@ -140,45 +145,178 @@ body.ed #ep{display:block}
  .film{gap:40px}
 }
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* ===== v2 upgrade ===== */
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(520px 380px at var(--mx,75%) var(--my,15%),color-mix(in srgb,var(--rose) 13%,transparent),transparent 70%)}
+body::after{content:"";position:fixed;inset:0;z-index:50;pointer-events:none;opacity:.06;mix-blend-mode:overlay;background:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+#prog{position:fixed;top:0;left:0;width:100%;height:3px;z-index:100;transform-origin:0 50%;transform:scaleX(var(--p,0));background:linear-gradient(90deg,var(--rose),var(--blue))}
+h2::after{content:"";display:block;width:56px;height:3px;margin-top:14px;border-radius:2px;background:linear-gradient(90deg,var(--rose),var(--blue))}
+nav a{position:relative;padding:4px 0;transition:color .2s}
+nav a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--rose);transform:scaleX(0);transition:transform .25s}
+nav a[aria-current]{color:var(--text)}nav a[aria-current]::after{transform:scaleX(1)}
+.hero{position:relative;overflow:hidden}
+.hero::before,.hero::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;filter:blur(90px);opacity:.28;pointer-events:none;animation:float 14s ease-in-out infinite alternate}
+.hero::before{background:var(--rose);top:-120px;right:6%}.hero::after{background:var(--blue);bottom:-160px;left:-80px;animation-delay:-6s}
+@keyframes float{to{transform:translate(-50px,40px) scale(1.15)}}
+.hero .wrap{position:relative;z-index:1}
+.hero .wrap>*{animation:up .9s cubic-bezier(.2,.7,.2,1) backwards}.hero .wrap>*:nth-child(2){animation-delay:.18s}
+@keyframes up{from{opacity:0;transform:translateY(28px)}}
+.hero h1 span{transition:color .4s}.hero h1:hover span{color:var(--rose)}
+.poster{transform:rotate(2.5deg) perspective(900px) rotateY(var(--ry,0deg)) rotateX(var(--rx,0deg));transition:transform .25s ease-out;box-shadow:0 30px 70px rgba(0,0,0,.55),0 0 80px color-mix(in srgb,var(--rose) 28%,transparent)}
+.stats div{transition:border-color .2s,transform .2s}.stats div:hover{border-color:var(--rose);transform:translateY(-2px)}
+.mq{overflow:hidden;white-space:nowrap;border-block:1px solid var(--line);background:var(--deep);padding:14px 0;-webkit-mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mq div{display:inline-flex;width:max-content;animation:mq 34s linear infinite}.mq:hover div{animation-play-state:paused}
+.mq span{font:400 24px var(--serif);color:var(--mute);padding-right:34px}.mq span::after{content:"✦";color:var(--rose);margin-left:34px;font-size:16px}.mq span:nth-child(3n+1){color:var(--rose2)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.card,.upd,.ann,.soc a{backdrop-filter:blur(6px)}
+.card{transition:transform .3s,border-color .3s,box-shadow .3s}.card:hover{transform:translateY(-6px);border-color:var(--rose);box-shadow:0 22px 50px #0007,0 0 40px color-mix(in srgb,var(--rose) 14%,transparent)}
+.card img{transition:transform .7s}.card:hover img{transform:scale(1.05)}
+.upd,.ann{transition:border-color .25s,transform .25s}.upd:hover,.ann:hover{border-color:var(--rose);transform:translateX(4px)}
+.soc a{background:linear-gradient(135deg,var(--ink2),color-mix(in srgb,var(--ink2) 80%,var(--rose)))}
+.soc a::after{content:"↗";float:right;margin-top:-34px;color:var(--rose);opacity:0;transition:opacity .2s,transform .2s}.soc a:hover::after{opacity:1;transform:translate(3px,-3px)}
+.tl{border-left:0;border-image:linear-gradient(var(--rose),var(--blue),var(--line)) 1;border-left:2px solid}
+.tl li::before{transition:transform .25s,box-shadow .25s,background .25s}.tl li:hover::before{background:var(--rose);transform:scale(1.15);box-shadow:0 0 0 7px color-mix(in srgb,var(--rose) 25%,transparent)}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin:-8px 0 26px}.chips input[type=radio]{position:absolute;opacity:0;pointer-events:none}
+.chips #fq{margin-left:auto;min-width:0;width:min(240px,100%);background:var(--ink2);border:1px solid var(--line);color:var(--text);border-radius:99px;padding:6px 16px;font:inherit;font-size:14px}.chips #fq:focus{outline:0;border-color:var(--rose)}
+.chips label{cursor:pointer;border:1px solid var(--line);background:var(--ink2);color:var(--mute);padding:6px 18px;border-radius:99px;font-size:14px;font-weight:600;transition:all .2s}
+.chips label:hover{border-color:var(--rose);color:var(--text)}.chips input:checked+label{background:var(--rose);border-color:var(--rose);color:#fff}.chips input:focus-visible+label{outline:2px solid var(--rose);outline-offset:3px}
+.chips:has(#k-film:checked)~.film li:not([data-k=film]),.chips:has(#k-tv:checked)~.film li:not([data-k=tv]),.chips:has(#k-film:checked)~.film>div:not(:has(li[data-k=film])),.chips:has(#k-tv:checked)~.film>div:not(:has(li[data-k=tv])){display:none}
+body.ed .film li{display:grid!important}body.ed .film>div{display:block!important}
+.film li{transition:background .2s,padding-left .2s}.film li:hover{background:color-mix(in srgb,var(--rose) 8%,transparent);padding-left:8px}
+.reel{cursor:grab;scrollbar-width:thin;scrollbar-color:var(--rose) transparent}.reel img{cursor:zoom-in;transition:transform .45s,filter .45s}.reel figure:hover img{transform:scale(1.03);filter:saturate(1.15)}
+.poster img,.card img{cursor:zoom-in}
+@supports(animation-timeline:view()){
+ .wrap>h2,.tl li,.card,.upd,.ann,.soc a,.film>div,.vid,.bio .wrap>div,.stats div{animation:rv linear backwards;animation-timeline:view();animation-range:entry 0% entry 40%}
+ @keyframes rv{from{opacity:0;transform:translateY(40px) scale(.98)}}
+}
+#lb{position:fixed;inset:0;z-index:130;display:none;place-items:center;background:#000e;backdrop-filter:blur(8px);padding:20px}#lb.on{display:grid;animation:up .3s}
+#lb figure{max-width:min(94vw,1100px);text-align:center}#lbi{max-width:100%;max-height:80vh;border-radius:8px;box-shadow:0 30px 80px #000}
+#lbc{margin-top:14px;color:var(--rose2);font:400 20px var(--serif)}
+#lb button,#top{position:fixed;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--ink2);color:var(--text);font-size:20px;cursor:pointer;transition:background .2s,transform .2s}
+#lb button:hover,#top:hover{background:var(--rose);transform:scale(1.08)}
+#lbx{top:16px;right:16px}#lbp{left:14px;top:50%}#lbn{right:14px;top:50%}#lb.one #lbp,#lb.one #lbn{display:none}
+#top{right:14px;bottom:62px;z-index:90;opacity:0;pointer-events:none;transform:translateY(12px)}#top.on{opacity:.92;pointer-events:auto;transform:none}body.ed #top{display:none}
+@media(max-width:820px){.mq span{font-size:19px}.hero::before{width:280px;height:280px}}
+@media(hover:none){.poster{transform:rotate(2.5deg)}}
+
+/* ===== v3 ===== */
+:root[data-theme=light]{--ink:#fbf5f9;--ink2:#fff;--line:#e6d6ea;--text:#26172f;--mute:#6d5b7c;--rose:#e0306f;--rose2:#b02c68;--blue:#4a5ae0}
+:root[data-theme=light] body::after{opacity:.035}
+:root[data-theme=light] .card:hover{box-shadow:0 22px 50px #3a2a4d22}
+html{transition:background-color .3s}body,nav,.card,.upd,.ann,.soc a{transition:background-color .3s,color .3s,border-color .3s}
+.fab{position:fixed;bottom:14px;z-index:90;height:40px;min-width:40px;padding:0 14px;border-radius:99px;border:1px solid var(--line);background:var(--ink2);color:var(--text);font:600 14px var(--sans);cursor:pointer;transition:background .2s,transform .2s}
+.fab:hover{background:var(--rose);color:#fff;transform:translateY(-2px)}#tg{left:14px}#cp{left:64px}#cp kbd{font:inherit;opacity:.6;margin-left:6px}body.ed .fab{display:none}
+#pal{position:fixed;inset:0;z-index:140;display:none;align-items:flex-start;justify-content:center;padding:14vh 16px 0;background:#000a;backdrop-filter:blur(6px)}#pal.on{display:flex;animation:up .2s}
+#pal .bx{width:min(520px,100%);background:var(--ink2);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 30px 80px #0008}
+#pq{width:100%;padding:16px 18px;background:none;border:0;border-bottom:1px solid var(--line);color:var(--text);font:400 18px var(--sans);outline:0}
+#pl2{list-style:none;max-height:50vh;overflow:auto;padding:6px}#pl2 li{padding:11px 14px;border-radius:10px;cursor:pointer;display:flex;justify-content:space-between;gap:12px}
+#pl2 li small{color:var(--mute)}#pl2 li.sel{background:var(--rose);color:#fff}#pl2 li.sel small{color:#fff9}
+.film li.nm{display:none}
+/* ===== v4 swipe colors ===== */
+:root[data-accent=aqua]{--rose:#1fd8b0;--rose2:#8ff3dc;--blue:#3aa7ff;--ink:#071b20;--ink2:#0e2830;--line:#1c4552;--text:#e9fbf8;--mute:#8fb5b8}
+:root[data-accent=aqua][data-theme=light]{--rose:#0fa88c;--rose2:#0b8670;--blue:#1e88e5;--ink:#f1fbfa;--ink2:#fff;--line:#cfe9e6;--text:#0d2a30;--mute:#4f7378}
+:root[data-accent=lilac]{--rose:#b57bff;--rose2:#dcc2ff;--blue:#ff7bd5;--ink:#130f24;--ink2:#1d1634;--line:#36295a}
+:root[data-accent=lilac][data-theme=light]{--rose:#8a3fe0;--rose2:#6e2fb8;--blue:#d63fa5;--ink:#f7f3fd;--ink2:#fff;--line:#e3d8f3}
+:root[data-accent=gold]{--rose:#ffb02e;--rose2:#ffd98a;--blue:#ff6a4d;--ink:#1a120a;--ink2:#271b0f;--line:#4a3520;--text:#fbf0e1;--mute:#bba58a}
+:root[data-accent=gold][data-theme=light]{--rose:#d98200;--rose2:#a86300;--blue:#d9482d;--ink:#fdf8ef;--ink2:#fff;--line:#efdfc4;--text:#2b1b0a;--mute:#7a6247}
+:root[data-accent=aqua]:not([data-theme=light]) :is(.pill,.btn,.chips input:checked+label,#pl2 li.sel,.poster figcaption,.fab:hover),:root[data-accent=gold]:not([data-theme=light]) :is(.pill,.btn,.chips input:checked+label,#pl2 li.sel,.poster figcaption,.fab:hover){color:#1a1208}
+.hero{touch-action:pan-y;-webkit-user-select:none;user-select:none}body.ed .hero{user-select:auto}
+.hero{background:radial-gradient(900px 500px at 85% 20%,color-mix(in srgb,var(--rose) 26%,transparent),transparent 60%),radial-gradient(700px 500px at 0 100%,color-mix(in srgb,var(--blue) 20%,transparent),transparent 60%),linear-gradient(180deg,color-mix(in srgb,var(--rose) 8%,transparent),transparent)}
+#sw{position:fixed;left:14px;bottom:62px;z-index:90;display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:99px;border:1px solid var(--line);background:color-mix(in srgb,var(--ink2) 85%,transparent);backdrop-filter:blur(8px);font:600 13px var(--sans);color:var(--text)}
+#sw button{width:26px;height:26px;border:0;border-radius:50%;background:none;color:var(--mute);font-size:18px;cursor:pointer}#sw button:hover{color:var(--rose)}
+#sw i{width:9px;height:9px;border-radius:50%;background:var(--line);transition:all .3s}#sw i.on{width:22px;border-radius:5px;background:var(--rose)}
+#sw span{min-width:66px;text-align:center}body.ed #sw{display:none}
+#hint{position:fixed;left:50%;bottom:110px;transform:translateX(-50%);z-index:91;background:var(--rose);color:#fff;padding:9px 18px;border-radius:99px;font:600 14px var(--sans);opacity:0;pointer-events:none;transition:opacity .4s;white-space:nowrap}#hint.on{opacity:1}
+#wash{position:fixed;inset:0;z-index:97;pointer-events:none;opacity:0;background:radial-gradient(circle at var(--wx,50%) 40%,var(--rose),transparent 70%)}#wash.on{animation:wash .7s ease-out}
+@keyframes wash{0%{opacity:.5}100%{opacity:0}}
+:root .chips:has(#g-drama:checked)~.vgrid .rg:not([data-g=drama]){display:none}
+:root .chips:has(#g-comedy:checked)~.vgrid .rg:not([data-g=comedy]){display:none}
+:root .chips:has(#g-horror:checked)~.vgrid .rg:not([data-g=horror]){display:none}
+:root .chips:has(#g-kon:checked)~.vgrid .rg:not([data-g=kon]){display:none}
+:root .chips:has(#g-emo:checked)~.vgrid .rg:not([data-g=emo]){display:none}
+.chips:has(#w-win:checked)~#awlist .aw:not([data-w=win]){display:none}
+.chips:has(#w-nom:checked)~#awlist .aw:not([data-w=nom]){display:none}
+body.ed .rg,body.ed .aw{display:block!important}
+#range .chips,#awards .chips{margin-top:0}.rg small a,.aw small a{color:var(--rose2)}.aw time{font-size:15px}
+.film li{cursor:pointer}
+#fm{position:fixed;inset:0;z-index:135;display:none;place-items:center;background:#000d;backdrop-filter:blur(6px);padding:18px}#fm.on{display:grid;animation:up .25s}
+#fm .bx{width:min(520px,100%);max-height:86vh;overflow:auto;background:var(--ink2);border:1px solid var(--line);border-radius:18px;padding:26px;position:relative}
+#fm h3{font:400 28px/1.15 var(--serif);margin:4px 0}#fm time{color:var(--rose2);font-weight:600}#fm p{margin-top:12px;font-size:16px;color:var(--soft)}#fm b{color:var(--rose2);margin-right:6px}
+#fm .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}#fm a{color:var(--rose2)}#fx{position:absolute;top:12px;right:12px;width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--text);cursor:pointer}
+
+/* ===== v5 portfolio look ===== */
+:root{--ink:#0b0909;--ink2:#141011;--line:#2b2124;--rose:#8c6370;--rose2:#efc3ae;--blue:#6e5a66;--text:#f3e7e0;--mute:#a2949a;--serif:'Cormorant Garamond',Georgia,serif;--script:'Pinyon Script',cursive}
+h2,.card h3,.soc b{font-weight:500}
+nav .wrap{max-width:1280px;gap:0}nav a.brand,footer a.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text);margin-right:auto}
+.brand b{font:400 32px var(--serif);letter-spacing:-.1em;margin:0;color:var(--text)}.brand span{font:500 15px/1.15 var(--serif);letter-spacing:.24em}.brand small{display:block;font-size:8.5px;letter-spacing:.32em;color:var(--mute)}
+.nl{display:flex;gap:30px;margin:0 auto;padding:0 20px}.nl a{font:400 17px var(--serif);color:var(--text)}
+nav a.fol{margin-left:auto;background:color-mix(in srgb,var(--rose) 70%,var(--ink));color:var(--text);border-radius:99px;padding:7px 26px;font:500 16px var(--serif)}.brand::after,.fol::after{display:none}
+.hero.hx{min-height:min(74vh,640px);display:flex;align-items:center;padding:0;background:none}.hx::before,.hx::after{display:none}
+.hx .hbg{position:absolute;inset:0;background:linear-gradient(90deg,var(--ink) 16%,color-mix(in srgb,var(--ink) 55%,transparent) 46%,transparent 78%),linear-gradient(0deg,var(--ink),transparent 28%),url(images/dirty-linen-2023.png) 80% 20%/cover no-repeat}
+.hero.hx .wrap{display:block;max-width:1280px;padding-block:64px}.eyebrow{letter-spacing:.36em;font-size:12px;color:var(--mute)}
+.hx h1{font:400 clamp(58px,10vw,118px)/.95 var(--serif);text-transform:uppercase;margin:26px 0 0}
+.hx h1 em{display:block;font:400 clamp(72px,13vw,150px)/.6 var(--script);text-transform:none;color:var(--rose2);margin:0 0 4px -.04em}
+.hx .tag{font:italic 400 clamp(19px,2.6vw,24px)/1.5 var(--serif);color:var(--text);margin:26px 0 22px}
+.ghost{display:inline-block;border:1px solid var(--rose2);color:var(--text);padding:12px 24px;border-radius:10px;text-decoration:none;font:500 17px var(--serif);transition:.25s}.ghost:hover{background:var(--rose);border-color:var(--rose)}.ghost.sm{padding:8px 18px;font-size:15px;margin-top:6px}
+.feat{padding:40px 0 24px}.feat .hd{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px}.feat h2{margin:0;font-size:32px}.feat h2::after{display:none}.feat .hd a{color:var(--mute);font-size:14px;text-decoration:none}
+.fcar{position:relative}.fr{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.fr::-webkit-scrollbar{display:none}
+.fc{flex:0 0 min(430px,84vw);aspect-ratio:16/9;position:relative;border:1px solid var(--line);border-radius:6px;overflow:hidden;scroll-snap-align:start}
+.fc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .6s}.fc:hover img{transform:scale(1.05)}.fc::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#000d,transparent 62%);pointer-events:none}
+.fc div{position:absolute;left:18px;bottom:14px;z-index:1}.fc h3{font:400 30px/1.1 var(--serif)}.fc p{font-size:14px;color:var(--soft)}
+.ar{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--ink);color:var(--text);font-size:20px;cursor:pointer;z-index:3}.ar:hover{background:var(--rose)}.ar.l{left:-10px}.ar.r{right:-10px}
+.band{border-block:1px solid var(--line);padding:50px 0;margin-top:20px}.bg5{display:grid;grid-template-columns:1.15fr 1fr 1fr 1.1fr 1.1fr}.bg5>div{padding:0 24px;border-left:1px solid var(--line)}.bg5>div:first-child{border:0;padding-left:0}
+.bg5 h3{font:400 25px var(--serif);margin-bottom:18px}.bg5 p,.bg5 li{font-size:14.5px;color:var(--soft)}.bg5 ul{list-style:none}
+.hl li{display:flex;gap:14px;margin-bottom:16px}.hl i{flex:0 0 46px;height:46px;border-radius:50%;background:color-mix(in srgb,var(--rose) 55%,var(--ink));display:grid;place-items:center;font-style:normal;font-size:20px;color:var(--text)}.hl b{display:block;font:500 17px var(--serif);color:var(--text)}.hl small{color:var(--mute);font-size:13px}
+.mt li{position:relative;padding:0 0 13px 22px;border-left:1px solid var(--line);font-size:13.5px}.mt li::before{content:"";position:absolute;left:-4px;top:6px;width:7px;height:7px;border-radius:50%;background:var(--rose)}.mt b{display:block;color:var(--text);font-weight:500}
+.aw2 li{display:flex;gap:12px;margin-bottom:18px;font-size:13.5px}.aw2 i{flex:0 0 38px;height:38px;border:1px solid var(--rose);border-radius:50%;display:grid;place-items:center;color:var(--rose2);font-style:normal}.aw2 b{color:var(--text);font-weight:500}
+.up li{display:flex;gap:12px;margin-bottom:14px}.up img{width:58px;height:58px;object-fit:cover;object-position:top;border-radius:4px}.up b{font-weight:500;color:var(--text)}.up small{display:block;color:var(--mute)}
+.more{display:inline-block;margin-top:6px;color:var(--text);font-size:14px;text-decoration:none;border-bottom:1px solid var(--line)}.more:hover{border-color:var(--rose)}
+footer{text-align:left;border-top:1px solid var(--line);padding:36px 0}.fg{display:flex;flex-wrap:wrap;gap:22px 40px;align-items:center;justify-content:space-between}.fn{display:flex;flex-wrap:wrap;gap:8px 22px;flex:1 1 360px;justify-content:center}.fn a{color:var(--mute);text-decoration:none;font-size:14px}.fn a:hover{color:var(--text)}.fg p{font-size:12px;max-width:320px}
+@media(max-width:1000px){.bg5{grid-template-columns:1fr 1fr;gap:36px 0}.bg5>div:nth-child(odd){border-left:0;padding-left:0}}
+@media(max-width:820px){.brand span{display:none}.nl{gap:20px}.hx .hbg{background:linear-gradient(180deg,color-mix(in srgb,var(--ink) 30%,transparent),var(--ink) 90%),url(images/dirty-linen-2023.png) center top/cover no-repeat}.ar{display:none}}
+@media(max-width:620px){.bg5{grid-template-columns:1fr}.bg5>div{border:0;padding:0}}
+
+/* ===== v6 mockup color shading ===== */
+body::before{background:radial-gradient(520px 380px at var(--mx,75%) var(--my,15%),rgba(140,80,70,.09),transparent 70%)}
+nav{background:color-mix(in srgb,#0b0909 90%,transparent);border-bottom-color:#241c1f}
+nav a[aria-current]{color:var(--rose2)}nav a::after{background:var(--rose2)}
+nav a.fol{background:#7a5562;color:#f6e9e2;box-shadow:inset 0 0 0 1px #9a7380}nav a.fol:hover{background:#946a78}
+.hx .hbg{background:radial-gradient(60% 90% at 78% 35%,rgba(150,85,70,.30),transparent 70%),linear-gradient(90deg,#0b0909 16%,rgba(11,9,9,.62) 46%,rgba(11,9,9,.05) 80%),linear-gradient(0deg,#0b0909,transparent 26%),url(images/dirty-linen-2023.png) 80% 20%/cover no-repeat}
+.hx .hbg::after{content:"";position:absolute;inset:0;background:#7a4a3a;mix-blend-mode:soft-light;opacity:.45}
+.hx h1{color:#f6e9e2;text-shadow:0 2px 30px rgba(0,0,0,.5)}
+.hx h1 em{background:linear-gradient(100deg,#f8dac8,#e3a998 55%,#c58d92);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 14px rgba(200,130,120,.25));padding-right:.1em}
+.eyebrow{color:#b9a9ad}
+.ghost{border-color:#e9bda8;color:#f6e9e2;background:rgba(255,255,255,.02)}.ghost:hover{background:#7a5562;border-color:#9a7380}
+.ghost.sm{background:#6f4a57;border-color:#a07583}
+.stats div{background:rgba(20,16,17,.7);border-color:#33292c}
+.fc{border-color:#352b2e;box-shadow:0 14px 40px rgba(0,0,0,.45)}.fc::after{background:linear-gradient(0deg,rgba(8,6,6,.88),rgba(8,6,6,.1) 62%)}
+.fc img{filter:saturate(.92) contrast(1.03)}
+.ar{background:#120e0f;border-color:#3a2f32}.ar:hover{background:#7a5562}
+.band{background:linear-gradient(180deg,#0e0b0c,#0b0909);border-color:#261d20}.bg5>div{border-color:#2a2124}
+.hl i{background:#74505d;color:#f4d7c8}.aw2 i{border-color:#a97d86;color:#efc3ae}.mt li{border-color:#4a3a3f}.mt li::before{background:#8c6370}
+.more{border-color:#3a2f32}.hl small,.up small{color:#9a8c91}
+.alt{background:#110d0e}.card,.upd,.ann,.soc a{background:#141011}
+h2::after{background:linear-gradient(90deg,#c58d92,#efc3ae)}
+footer{background:#080607;border-top-color:#241c1f}
+.tl li::before{border-color:#8c6370}.pill{background:#7a5562}
 </style>
 </head>
 <body>
 
-<div id="intro" role="dialog" aria-label="Intro">
- <div class="box">
-  <h1>Xyriel Nation</h1>
-  <div>Dialing…</div>
-  <div class="bar"><i></i></div>
-  <div>Handshake OK — loading dossier</div>
-  <button id="skip">Skip intro</button>
- </div>
-</div>
-
 <div id="site">
-<nav><div class="wrap">
- <b>Xyriel Nation</b>
- <a href="#announcements">Announcements</a><a href="#bio">Bio</a><a href="#socials">Socials</a><a href="#timeline">Timeline</a><a href="#now-showing">Now showing</a><a href="#updates">Updates</a><a href="#filmography">Filmography</a><a href="#gallery">Clippings</a><a href="#projects">Fan projects</a><a href="#fanpages">Fan pages</a>
-</div></nav>
+<nav><div class="wrap"><a class="brand" href="#home"><b>XM</b><span>XYRIEL MANABAT<small>ACTRESS PORTFOLIO</small></span></a><div class="nl"><a href="#home">Home</a><a href="#filmography">Filmography</a><a href="#range">Performances</a><a href="#timeline">Career</a><a href="#awards">Recognition</a><a href="#press">Press</a><a href="#bio">About</a></div><a class="fol" href="https://x.com/xmnbt" target="_blank" rel="noopener">Follow</a></div></nav>
 
-<header class="hero"><div class="wrap">
- <div>
-  <h1>Xyriel <span>Manabat</span></h1>
-  <p class="tag">Child star. Leading lady.</p>
-  <p>From third runner-up on a kiddie talent search to top-billed in Netflix's first Filipino original of 2026. A career in two acts, with a six-year quiet stretch in between.</p>
-  <div class="stats">
-   <div>Born <b>Jan 27, 2004</b></div>
-   <div>Debut <b>2009</b></div>
-   <div>Comeback <b>2023</b></div>
-   <div>Next <b>Stuck On You, Oct 2026</b></div>
-  </div>
- </div>
- <figure class="poster">
-  <img src="images/18th-rose-2026.png" alt="18th Rose Netflix poster, 2026">
-  <figcaption>Now on Netflix</figcaption>
- </figure>
-</div></header>
-
-<section id="announcements"><div class="wrap"><h2>Announcement board</h2><div id="alist"><article class="ann pin"><time>📌 Pinned</time><h3>Welcome to Xyriel Nation</h3><p>Unofficial fan site. Announcements for the fans will be posted here.</p><button class="ctl x" data-act="rm" aria-label="Remove">✕</button></article><article class="ann"><time>Reminder</time><h3>Support the official accounts</h3><p>Follow and tag her verified accounts, and keep every post kind.</p><button class="ctl x" data-act="rm" aria-label="Remove">✕</button></article></div><p><button class="ctl btn" data-act="adda">+ Add announcement</button></p></div></section>
+<header class="hero hx" id="home"><div class="hbg"></div><div class="wrap"><small class="eyebrow">FILIPINO ACTRESS</small><h1><em>Xyriel</em>Manabat</h1><p class="tag">Her talent tells stories.<br>Her presence leaves a mark.</p><a class="ghost" href="#filmography">Explore Filmography →</a>
+<div class="stats"><div>Born <b>Jan 27, 2004</b></div><div>Debut <b>2009</b></div><div>Comeback <b>2023</b></div><div>Latest <b>Best Actress, CinePanalo 2026</b></div></div></div></header>
+<section class="feat"><div class="wrap"><div class="hd"><h2>Featured Projects</h2><a href="#filmography">View All Projects →</a></div><div class="fcar"><button class="ar l" aria-label="Previous">‹</button><div class="fr"><article class="fc"><img src="images/stuck-on-you-2026.jpeg" alt="Stuck On You" loading="lazy"><div><h3>Stuck On You</h3><p>2026 · Film &nbsp;·&nbsp; as <i>Sheryl Bunga</i></p></div></article><article class="fc"><img src="images/18th-rose-2026.png" alt="18th Rose" loading="lazy"><div><h3>18th Rose</h3><p>2026 · Film &nbsp;·&nbsp; as <i>Rose</i></p></div></article><article class="fc"><img src="images/dirty-linen-2023.png" alt="Dirty Linen" loading="lazy"><div><h3>Dirty Linen</h3><p>2023 · TV Series &nbsp;·&nbsp; as <i>Tonet</i></p></div></article><article class="fc"><img src="images/agua-bendita-2010.jpeg" alt="Agua Bendita" loading="lazy"><div><h3>Agua Bendita</h3><p>2010 · TV Series &nbsp;·&nbsp; as <i>young Agua / Bendita</i></p></div></article></div><button class="ar r" aria-label="Next">›</button></div></div></section>
+<section class="band" id="highlights"><div class="wrap bg5">
+<div><h3>About Xyriel</h3><p>Xyriel Manabat is a Filipino actress who began as a child performer in 2009 and became one of the country’s best-known young stars. After a six-year break she returned in 2023 and, in 2026, won Best Actress at the Puregold CinePanalo Film Festival for <i>Stuck On You</i>.</p><a class="ghost sm" href="#bio">Read more about her →</a></div>
+<div><h3>Acting Highlights</h3><ul class="hl"><li><i>★</i><span><b>Dramatic roles</b><small>From Agua Bendita to Dirty Linen</small></span></li><li><i>☺</i><span><b>Coming-of-age</b><small>Senior High and 18th Rose</small></span></li><li><i>♡</i><span><b>Romantic lead</b><small>Stuck On You, her rom-com lead</small></span></li><li><i>✦</i><span><b>Versatile performer</b><small>Drama, comedy and horror</small></span></li></ul></div>
+<div><h3>Career Timeline</h3><ul class="mt"><li><b>2009</b>Star Circle Kid Quest, third runner-up</li><li><b>2010</b>Agua Bendita and film debut</li><li><b>2017 – 2023</b>A six-year break</li><li><b>2023</b>Comeback in Dirty Linen</li><li><b>2026</b>18th Rose, then Best Actress</li></ul><a class="more" href="#timeline">View full timeline →</a></div>
+<div><h3>Awards &amp; Recognition</h3><ul class="aw2"><li><i>✧</i><span><b>Panalong Aktres</b><br>Puregold CinePanalo · 2026 · Won</span></li><li><i>✧</i><span><b>Most Popular Female Child Performer</b><br>Box Office Entertainment Awards · 2011 · Won</span></li><li><i>✧</i><span><b>Best Child Performer</b><br>MMFF and Star Awards · 2010–11 · Won</span></li></ul><a class="more" href="#awards">View all awards →</a></div>
+<div><h3>Latest Updates</h3><ul class="up"><li><img src="images/stuck-on-you-2026.jpeg" alt=""><span><b>Best Actress at CinePanalo</b><small>October 2026</small></span></li><li><img src="images/18th-rose-2026.png" alt=""><span><b>18th Rose on Netflix</b><small>2026</small></span></li><li><img src="images/dirty-linen-2023.png" alt=""><span><b>Stuck On You joins CinePanalo</b><small>September 2026</small></span></li></ul><a class="more" href="#updates">View all updates →</a></div>
+</div></section>
+<section id="announcements"><div class="wrap"><h2>Announcement board</h2><div id="alist"><article class="ann pin"><time>📌 Pinned</time><h3>Welcome to Xyriel Nation</h3><p>Unofficial fan site. Announcements for the fans will be posted here.</p><button class="ctl x" data-act="rm" aria-label="Remove">✕</button></article><article class="ann pin"><time>🏆 Congratulations</time><h3>Xyriel is CinePanalo 2026 Best Actress!</h3><p>Panalong Aktres for <i>Stuck On You</i>. Thank you for supporting her all season. Salamat, Xyriel Nation!</p><button class="ctl x" data-act="rm" aria-label="Remove">✕</button></article><article class="ann"><time>Reminder</time><h3>Support the official accounts</h3><p>Follow and tag her verified accounts, and keep every post kind.</p><button class="ctl x" data-act="rm" aria-label="Remove">✕</button></article></div><p><button class="ctl btn" data-act="adda">+ Add announcement</button></p></div></section>
 
 <section id="bio" class="bio"><div class="wrap">
  <h2>The file on Xyriel</h2>
@@ -188,11 +326,11 @@ body.ed #ep{display:block}
  </div>
  <div>
   <p><i>100 Days to Heaven</i> (2011) made her one of the country's most recognizable child stars, and in 2012 she headlined month-long specials of <i>Wansapanataym</i>.</p>
-  <p>After a brief turn in <i>Wildflower</i> (2017), she stepped away for six years, then returned in 2023 with <i>Dirty Linen</i> and <i>Senior High</i>. A stacked 2025 followed, six onscreen roles plus <i>Pinoy Big Brother: Celebrity Collab Edition</i>. In 2026 she took her first lead in a Netflix original, opposite longtime friend Kyle Echarri.</p>
+  <p>After a brief turn in <i>Wildflower</i> (2017), she stepped away for six years, then returned in 2023 with <i>Dirty Linen</i> and <i>Senior High</i>. A stacked 2025 followed, six onscreen roles plus <i>Pinoy Big Brother: Celebrity Collab Edition</i>. In 2026 she took her first lead in a Netflix original, opposite longtime friend Kyle Echarri. Later that year she won Best Actress (Panalong Aktres) at the Puregold CinePanalo Film Festival for the rom-com <i>Stuck On You</i>.</p>
  </div>
 </div></section>
 
-<section id="socials" style="background:var(--ink2);border-block:1px solid var(--line)"><div class="wrap">
+<section id="socials" class="alt"><div class="wrap">
  <h2>Official accounts</h2>
  <p class="note">Verified handles only. There are a lot of fan and lookalike accounts, so double-check before you follow.</p>
  <div class="soc">
@@ -216,11 +354,11 @@ body.ed #ep{display:block}
   <li><time>2023</time><h3>Dirty Linen · Senior High</h3><p>Returns in two ensemble dramas, rebuilding as a teenage actress.</p></li>
   <li><time>2024 – 2025</time><h3>Sunshine to a stacked 2025</h3><p><i>PBB Collab</i>, <i>It's Okay to Not Be Okay</i>, <i>Near Death</i>, <i>The Last Beergin</i> and <i>Love You So Bad</i>.</p></li>
   <li><time>2026</time><h3>18th Rose</h3><p>First lead film role, opposite Kyle Echarri, in Netflix's first Philippine original of the year.</p></li>
-  <li><time>Oct 2026</time><h3>Stuck On You</h3><p>A rom-com with River Joseph at the Puregold CinePanalo Film Festival.</p></li>
+  <li><time>Sep – Oct 2026</time><h3>Stuck On You · Best Actress</h3><p>Her first rom-com lead, opposite River Joseph, at the Puregold CinePanalo Film Festival. She won Panalong Aktres (Best Actress) and the film also took Panalong Awitin.</p></li>
  </ol>
 </div></section>
 
-<section id="now-showing" style="background:var(--ink2);border-block:1px solid var(--line)"><div class="wrap">
+<section id="now-showing" class="alt"><div class="wrap">
  <h2>Now showing</h2>
  <div class="show">
   <article class="card">
@@ -232,55 +370,61 @@ body.ed #ep{display:block}
   </article>
   <article class="card" id="stuck-on-you">
    <img src="images/stuck-on-you-2026.jpeg" alt="Xyriel Manabat and River Joseph promoting Stuck On You" loading="lazy">
-   <div><span class="pill b">In cinemas October 2026</span>
+   <div><span class="pill b">🏆 Best Actress · CinePanalo 2026</span>
    <h3>Stuck On You (2026)</h3>
    <p>Her first rom-com lead: Sheryl Bunga opposite River Joseph's Max de Dios in a friends-to-something-more comedy. A lighter, kilig-filled turn after years of drama.</p>
-   <small>With River Joseph · directed by Mikko Baldoza · Puregold CinePanalo</small></div>
+   <small>With River Joseph · directed by Mikko Baldoza · 2 awards at Puregold CinePanalo (festival run ended Oct 4)</small></div>
   </article>
  </div>
 </div></section>
 
-<section id="updates"><div class="wrap"><h2>Latest updates</h2><div id="ulist"><article class="upd"><time>October 2026</time><h3>Stuck On You is in cinemas</h3><p>Her first rom-com lead, opposite River Joseph, directed by Mikko Baldoza, at the Puregold CinePanalo Film Festival.</p><small><a href="#">Source →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd"><time>2026</time><h3>18th Rose is streaming</h3><p>Her first lead film role, opposite Kyle Echarri, on Netflix.</p><small><a href="#">Source →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd"><time>Upcoming</time><h3>The Secrets of Hotel 88</h3><p>TV series, playing Chesca Endaya.</p><small><a href="#">Source →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article></div><p><button class="ctl btn" data-act="addu">+ Add update</button></p></div></section>
+<section id="updates"><div class="wrap"><h2>Latest updates</h2><div id="ulist"><article class="upd"><time>October 2026</time><h3>Xyriel wins Best Actress at CinePanalo 2026</h3><p>She took home Panalong Aktres for her comedic turn as Sheryl Bunga in <i>Stuck On You</i>. The film also won Panalong Awitin for “Reyna ng Quezon City” by Juana. The festival run ended October 4.</p><small><a href="https://randomrepublika.com/puregold-cinepanalo-film-festival-2026-celebrates-successful-run-and-unveils-winners" target="_blank" rel="noopener">Source →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd"><time>September 2026</time><h3>Stuck On You joins CinePanalo</h3><p>Xyriel and River Joseph arrived at the festival on September 17 for the full-length entry directed by Mikko Baldoza.</p><small><a href="https://x.com/ABSCBNNews/status/2100515551978385663" target="_blank" rel="noopener">Source →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd"><time>2026</time><h3>18th Rose is streaming</h3><p>Her first lead film role, opposite Kyle Echarri, on Netflix.</p><small><a href="#">Source →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd"><time>Upcoming</time><h3>The Secrets of Hotel 88</h3><p>TV series, playing Chesca Endaya.</p><small><a href="#">Source →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article></div><p><button class="ctl btn" data-act="addu">+ Add update</button></p></div></section>
 
+<section id="range"><div class="wrap"><h2>Acting range</h2><p class="note">Pick a lane. Clips link to the original sources.</p><div class="chips" role="radiogroup"><input type="radio" name="g" id="g-drama" checked><label for="g-drama">Drama</label><input type="radio" name="g" id="g-comedy"><label for="g-comedy">Comedy</label><input type="radio" name="g" id="g-horror"><label for="g-horror">Horror</label><input type="radio" name="g" id="g-kon"><label for="g-kon">Kontrabida</label><input type="radio" name="g" id="g-emo"><label for="g-emo">Emotional</label></div><div class="vgrid" id="rglist"><article class="upd rg" data-g="drama"><time>2010</time><h3>Agua Bendita</h3><p>Dual role as identical twins in the fantasy drama that broke her out.</p><small><a href="#">Watch clip →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd rg" data-g="drama"><time>2011</time><h3>100 Days to Heaven</h3><p>As young Anna Manalastas, the role that made her one of the most recognizable child stars.</p><small><a href="#">Watch clip →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd rg" data-g="drama"><time>2023</time><h3>Dirty Linen</h3><p>As Tonet, in the ensemble drama that marked her comeback.</p><small><a href="#">Watch clip →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd rg" data-g="comedy"><time>2026</time><h3>Stuck On You</h3><p>As Sheryl Bunga, her rom-com lead. It won her Best Actress at CinePanalo 2026.</p><small><a href="#">Watch clip →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd rg" data-g="comedy"><time>2012</time><h3>Sisterakas</h3><p>As Cindy Maningas.</p><small><a href="#">Watch clip →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd rg" data-g="comedy"><time>2010</time><h3>Ang Tanging Ina Mo: Last Na 'To!</h3><p>As Monay Montecillo, her film debut and Best Child Performer winner.</p><small><a href="#">Watch clip →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd rg" data-g="horror"><time>2012</time><h3>Amorosa: The Revenge</h3><p>As Nadia, a spirit role in the horror film.</p><small><a href="#">Watch clip →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd rg" data-g="kon"><time>—</time><h3>Add her villain roles</h3><p>Use + Add to attach a clip or trailer link.</p><small><a href="#">Watch clip →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd rg" data-g="emo"><time>—</time><h3>Add an emotional scene</h3><p>Use + Add to attach a clip or trailer link.</p><small><a href="#">Watch clip →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article></div><p style="margin-top:20px"><button class="ctl btn" data-n="rg" data-to="rglist">+ Add</button></p></div></section>
+<section id="characters" class="alt"><div class="wrap"><h2>Character universe</h2><div class="vgrid" id="chlist"><article class="upd "><time>Character</time><h3>Rose</h3><p><em>18th Rose (2026)</em><br>A teen in early-2000s Romblon chasing the perfect debut party, with dial-up as her only ally. Her first film lead.</p><button class="ctl x" data-act="rm" aria-label="Remove">✕</button></article><article class="upd "><time>Character</time><h3>Sheryl Bunga</h3><p><em>Stuck On You (2026)</em><br>The rom-com lead opposite River Joseph’s Max de Dios. Xyriel has described the character as delulu, and the role won her Best Actress.</p><button class="ctl x" data-act="rm" aria-label="Remove">✕</button></article><article class="upd "><time>Character</time><h3>Monay Montecillo</h3><p><em>Ang Tanging Ina Mo: Last Na 'To! (2010)</em><br>Her film debut, which won Best Child Performer at the MMFF and Star Awards. She played the role again in <i>Enteng ng Ina Mo</i>.</p><button class="ctl x" data-act="rm" aria-label="Remove">✕</button></article><article class="upd "><time>Character</time><h3>Tonet Pavia</h3><p><em>Dirty Linen (2023)</em><br>Antonette “Tonet” Feiro Pavia, her comeback role after six years away.</p><button class="ctl x" data-act="rm" aria-label="Remove">✕</button></article><article class="upd "><time>Character</time><h3>Roxy Cristobal</h3><p><em>Senior High (2023)</em><br>Roxanne “Roxy” Cristobal in the teen drama that followed her return.</p><button class="ctl x" data-act="rm" aria-label="Remove">✕</button></article></div></div></section>
 <section id="filmography"><div class="wrap">
  <h2>Filmography</h2>
+ <div class="chips" role="radiogroup" aria-label="Filter filmography"><input type="radio" name="k" id="k-all" checked><label for="k-all">All</label><input type="radio" name="k" id="k-film"><label for="k-film">Film</label><input type="radio" name="k" id="k-tv"><label for="k-tv">TV</label><input type="search" id="fq" placeholder="Search titles or roles…" aria-label="Search filmography"></div>
  <div class="film">
   <div><h3>Recent</h3><ul>
-   <li><i>2026</i><span>The Secrets of Hotel 88<em>TV, upcoming · Chesca Endaya</em></span></li>
-   <li><i>2026</i><span>Stuck On You<em>Film · Sheryl Bunga</em></span></li>
-   <li><i>2026</i><span>18th Rose<em>Film · Rose</em></span></li>
-   <li><i>2025</i><span>It's Okay to Not Be Okay<em>TV · Madeth</em></span></li>
-   <li><i>2025</i><span>Love You So Bad<em>Film · Belai</em></span></li>
-   <li><i>2025</i><span>Near Death<em>Film · Mia</em></span></li>
-   <li><i>2025</i><span>The Last Beergin<em>Film · Sandy</em></span></li>
-   <li><i>2025</i><span>Kontrabida Academy<em>Film · Mimi</em></span></li>
-   <li><i>2025</i><span>Wish Ko Lang!, "Rabies"<em>TV · Jamaica Seraspe</em></span></li>
-   <li><i>2025</i><span>Pinoy Big Brother: Celebrity Collab Edition<em>Housemate</em></span></li>
-   <li><i>2024</i><span>Sunshine<em>Film · Thea</em></span></li>
+   <li data-k="tv"><i>2026</i><span>The Secrets of Hotel 88<em>TV, upcoming · Chesca Endaya</em></span></li>
+   <li data-k="film" data-g="Romantic comedy · dir. Mikko Baldoza" data-cast="Xyriel Manabat, River Joseph, Roger Naldo, Bob Jbeili, Bombi Plata, Viggo Franco, JM Salvado" data-syn="Sheryl Bunga and Max de Dios in a friends-to-something-more comedy with a dangerous twist. A CinePanalo 2026 entry that won Best Actress and Best Song." data-tr="https://x.com/retRIVERsOFC2/status/2092191161620287490"><i>2026</i><span>Stuck On You<em>Film · Sheryl Bunga · Best Actress, CinePanalo</em></span></li>
+   <li data-k="film" data-g="Coming-of-age · Netflix" data-cast="Xyriel Manabat, Kyle Echarri" data-syn="Early-2000s Romblon. Rose tries to pull off the perfect debut party with a dial-up connection working against her."><i>2026</i><span>18th Rose<em>Film · Rose</em></span></li>
+   <li data-k="tv"><i>2025</i><span>It's Okay to Not Be Okay<em>TV · Madeth</em></span></li>
+   <li data-k="film"><i>2025</i><span>Love You So Bad<em>Film · Belai</em></span></li>
+   <li data-k="film"><i>2025</i><span>Near Death<em>Film · Mia</em></span></li>
+   <li data-k="film"><i>2025</i><span>The Last Beergin<em>Film · Sandy</em></span></li>
+   <li data-k="film"><i>2025</i><span>Kontrabida Academy<em>Film · Mimi</em></span></li>
+   <li data-k="tv"><i>2025</i><span>Wish Ko Lang!, "Rabies"<em>TV · Jamaica Seraspe</em></span></li>
+   <li data-k="tv"><i>2025</i><span>Pinoy Big Brother: Celebrity Collab Edition<em>Housemate</em></span></li>
+   <li data-k="film"><i>2024</i><span>Sunshine<em>Film · Thea</em></span></li>
   </ul></div>
   <div><h3>The comeback</h3><ul>
-   <li><i>2023</i><span>Senior High<em>TV · Roxanne "Roxy" Cristobal</em></span></li>
-   <li><i>2023</i><span>Dirty Linen<em>TV · Antonette "Tonet" Feiro Pavia</em></span></li>
+   <li data-k="tv"><i>2023</i><span>Senior High<em>TV · Roxanne "Roxy" Cristobal</em></span></li>
+   <li data-k="tv"><i>2023</i><span>Dirty Linen<em>TV · Antonette "Tonet" Feiro Pavia</em></span></li>
   </ul></div>
   <div><h3>Child star years</h3><ul>
-   <li><i>2018</i><span>Mary, Marry Me</span></li>
-   <li><i>2017</i><span>Ilawod<em>as Bea</em></span></li>
-   <li><i>2015</i><span>Pangil sa Tubig<em>as Fatima</em></span></li>
-   <li><i>2014</i><span>Hawak Kamay<em>TV · Windy</em></span></li>
-   <li><i>2013</i><span>Girl, Boy, Bakla, Tomboy<em>as Cindy</em></span></li>
-   <li><i>2013</i><span>Four Sisters and a Wedding</span></li>
-   <li><i>2012</i><span>Sisterakas<em>as Cindy Maningas</em></span></li>
-   <li><i>2012</i><span>Amorosa: The Revenge<em>as Nadia</em></span></li>
-   <li><i>2012</i><span>Ikaw Lamang<em>TV</em></span></li>
-   <li><i>2011</i><span>Enteng ng Ina Mo<em>as Monay Montecillo</em></span></li>
-   <li><i>2011</i><span>100 Days to Heaven<em>TV · young Anna Manalastas</em></span></li>
-   <li><i>2010</i><span>Ang Tanging Ina Mo: Last Na 'To!<em>as Monay Montecillo</em></span></li>
-   <li><i>2010</i><span>Agua Bendita<em>TV · young Agua / Bendita</em></span></li>
-   <li><i>2010</i><span>Momay<em>TV · Miley "Momay" Buenavidez</em></span></li>
+   <li data-k="film"><i>2018</i><span>Mary, Marry Me</span></li>
+   <li data-k="film"><i>2017</i><span>Ilawod<em>as Bea</em></span></li>
+   <li data-k="film"><i>2015</i><span>Pangil sa Tubig<em>as Fatima</em></span></li>
+   <li data-k="tv"><i>2014</i><span>Hawak Kamay<em>TV · Windy</em></span></li>
+   <li data-k="film"><i>2013</i><span>Girl, Boy, Bakla, Tomboy<em>as Cindy</em></span></li>
+   <li data-k="film"><i>2013</i><span>Four Sisters and a Wedding</span></li>
+   <li data-k="film"><i>2012</i><span>Sisterakas<em>as Cindy Maningas</em></span></li>
+   <li data-k="film"><i>2012</i><span>Amorosa: The Revenge<em>as Nadia</em></span></li>
+   <li data-k="tv"><i>2012</i><span>Ikaw Lamang<em>TV</em></span></li>
+   <li data-k="film"><i>2011</i><span>Enteng ng Ina Mo<em>as Monay Montecillo</em></span></li>
+   <li data-k="tv"><i>2011</i><span>100 Days to Heaven<em>TV · young Anna Manalastas</em></span></li>
+   <li data-k="film"><i>2010</i><span>Ang Tanging Ina Mo: Last Na 'To!<em>as Monay Montecillo</em></span></li>
+   <li data-k="tv"><i>2010</i><span>Agua Bendita<em>TV · young Agua / Bendita</em></span></li>
+   <li data-k="tv"><i>2010</i><span>Momay<em>TV · Miley "Momay" Buenavidez</em></span></li>
   </ul></div>
  </div>
 </div></section>
 
+<section id="awards"><div class="wrap"><h2>Awards cabinet</h2><p class="note">Wins and nominations, with the project behind each. Nominations will appear once added.</p><div class="chips" role="radiogroup"><input type="radio" name="w" id="w-all" checked><label for="w-all">All</label><input type="radio" name="w" id="w-win"><label for="w-win">Wins</label><input type="radio" name="w" id="w-nom"><label for="w-nom">Nominations</label></div><div id="awlist"><article class="upd aw" data-w="win"><time>2026</time><h3>Panalong Aktres (Best Actress)</h3><p>Stuck On You · Puregold CinePanalo Film Festival</p><small><a href="https://randomrepublika.com/puregold-cinepanalo-film-festival-2026-celebrates-successful-run-and-unveils-winners" target="_blank" rel="noopener">Source →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd aw" data-w="win"><time>2011</time><h3>Most Popular Female Child Performer</h3><p>100 Days to Heaven · Box Office Entertainment Awards</p><small><a href="#">Source →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd aw" data-w="win"><time>2010–11</time><h3>Best Child Performer</h3><p>Ang Tanging Ina Mo: Last Na 'To! · MMFF and Star Awards for Movies</p><small><a href="#">Source →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd aw" data-w="win"><time>Early 2010s</time><h3>Best Child Actress (two-time winner)</h3><p>FAMAS Awards, per her public profile. Add exact years and projects in the editor.</p><small><a href="#">Source →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article></div><p><button class="ctl btn" data-n="aw" data-to="awlist">+ Add award</button></p></div></section>
+<section id="press" class="alt"><div class="wrap"><h2>Press &amp; interviews</h2><p class="note">Verified media only, linked to the original sources.</p><div id="prlist"><article class="upd "><time>Sep 12, 2026</time><h3>Xyriel and River bring kilig, comedy, and a deadly twist to ‘Stuck On You’</h3><p>BusinessMirror</p><small><a href="https://businessmirror.com.ph/2026/09/12/xyriel-and-river-bring-kilig-comedy-and-a-deadly-twist-to-stuck-on-you/" target="_blank" rel="noopener">Read →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd "><time>Sep 12, 2026</time><h3>Xyriel Manabat, River Joseph bring kilig to ‘Stuck on You’ in CinePanalo 2026</h3><p>CinemaBravo</p><small><a href="https://cinemabravo.com/2026/09/12/xyriel-manabat-river-joseph-bring-kilig-to-stuck-on-you-in-cinepanalo-2026/" target="_blank" rel="noopener">Read →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd "><time>Sep 20, 2026</time><h3>River at Xyriel, may ‘tension’</h3><p>Philstar · Banat Showbiz</p><small><a href="https://www.philstar.com/banat/showbiz/2026/09/20/2557521/river-xyriel-may-tension" target="_blank" rel="noopener">Read →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd "><time>Oct 7, 2026</time><h3>Puregold CinePanalo 2026 celebrates successful run and unveils winners</h3><p>Random Republika</p><small><a href="https://randomrepublika.com/puregold-cinepanalo-film-festival-2026-celebrates-successful-run-and-unveils-winners" target="_blank" rel="noopener">Read →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article></div><p><button class="ctl btn" data-n="pr" data-to="prlist">+ Add article</button></p></div></section>
+<section id="more"><div class="wrap"><h2>Upcoming, scene &amp; memories</h2><div class="vgrid"><div><article class="upd "><time>Upcoming · confirmed only</time><h3>The Secrets of Hotel 88</h3><p>TV series, as Chesca Endaya. Release date to be announced.</p><small><a href="#">Announcement →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article></div><div><article class="upd "><time>Scene of the month</time><h3>Add this month’s pick</h3><p>Name the scene and say why it stays with you.</p><small><a href="#">Watch →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article></div></div><h3 style="font:400 24px var(--serif);margin:34px 0 14px">Fan memory wall</h3><p class="note">Moderated. Messages are added by the admin. Send yours through <a href="https://x.com/xyrielnationofc" target="_blank" rel="noopener" style="color:var(--rose2)">@xyrielnationofc</a>.</p><div id="mmlist"><article class="upd "><time>Fan memory</time><h3>Your message here</h3><p>A performance that stayed with you, and why.</p><button class="ctl x" data-act="rm" aria-label="Remove">✕</button></article></div><p><button class="ctl btn" data-n="mm" data-to="mmlist">+ Add memory</button></p></div></section>
 <section id="gallery" class="strip" style="padding-bottom:30px"><div class="wrap"><h2>From the scrapbook</h2><p class="note">Real stills from her filmography, then and now. Swipe to scroll.</p><button class="ctl btn" data-act="addph">+ Add photos</button></div>
  <div class="reel" tabindex="0" aria-label="Photo strip">
   <figure><img src="images/agua-bendita-2010.jpeg" alt="Xyriel Manabat in Agua Bendita, 2010" loading="lazy"><figcaption><b>Agua Bendita</b>2010</figcaption><button class="ctl x" data-act="rm" aria-label="Remove">✕</button></figure>
@@ -291,20 +435,111 @@ body.ed #ep{display:block}
  </div>
 </section>
 
-<section id="projects" style="background:var(--ink2);border-block:1px solid var(--line)"><div class="wrap"><h2>Fan projects</h2><p class="note">Streaming parties, voting drives, fan art and more.</p><div class="show" id="fplist"><article class="card fp"><img src="data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27800%27 height=%27600%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%233a2a4d%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 fill=%27%23a595b8%27 font-size=%2734%27 font-family=%27sans-serif%27 text-anchor=%27middle%27%3ETap to add photo%3C/text%3E%3C/svg%3E" alt="Fan project"><div><span class="pill">Fan project</span><h3>Project title</h3><p>Describe the project: streaming party, voting drive, fan art, project for her birthday...</p><small><a href="#">Visit project →</a></small></div><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article></div><p style="margin-top:20px"><button class="ctl btn" data-act="addp">+ Add project</button></p></div></section>
+<section id="videos"><div class="wrap"><h2>Videos</h2><p class="note">Clips, trailers and fan edits. Tap play.</p><div class="vgrid" id="vlist"></div><p style="margin-top:20px"><button class="ctl btn" data-act="addv">+ Video file</button> <button class="ctl btn" data-act="addl">+ Video link</button></p></div></section>
+
+<section id="projects" class="alt"><div class="wrap"><h2>Fan projects</h2><p class="note">Streaming parties, voting drives, fan art and more.</p><div class="show" id="fplist"><article class="card fp"><img src="data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27800%27 height=%27600%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%233a2a4d%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 fill=%27%23a595b8%27 font-size=%2734%27 font-family=%27sans-serif%27 text-anchor=%27middle%27%3ETap to add photo%3C/text%3E%3C/svg%3E" alt="Fan project"><div><span class="pill">Fan project</span><h3>Project title</h3><p>Describe the project: streaming party, voting drive, fan art, project for her birthday...</p><small><a href="#">Visit project →</a></small></div><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article></div><p style="margin-top:20px"><button class="ctl btn" data-act="addp">+ Add project</button></p></div></section>
 
 <section id="fanpages"><div class="wrap"><h2>Fan pages</h2><p class="note">Fan-run accounts, not official. Follow and support them.</p><div class="soc" id="fglist"><div class="fpg"><a href="#"><b>Fan page name</b><small>@handle · Platform</small></a><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></div></div><p style="margin-top:20px"><button class="ctl btn" data-act="addf">+ Add fan page</button></p></div></section>
 
-<footer><div class="wrap">Unofficial fan dossier. Not affiliated with Xyriel Manabat or her management.<br>Built by <b>Serene</b></div></footer>
+<footer><div class="wrap fg"><a class="brand" href="#home"><b>XM</b><span>XYRIEL MANABAT<small>ACTRESS PORTFOLIO</small></span></a><div class="fn"><a href="#home">Home</a><a href="#filmography">Filmography</a><a href="#range">Performances</a><a href="#timeline">Career</a><a href="#awards">Recognition</a><a href="#press">Press</a><a href="#bio">About</a><a href="#announcements">Announcements</a><a href="#updates">Updates</a><a href="#gallery">Clippings</a><a href="#videos">Videos</a><a href="#projects">Fan projects</a><a href="#fanpages">Fan pages</a></div><p>An independent, unofficial portfolio. Not affiliated with Xyriel Manabat or her management. Built by <b>Serene</b>.</p></div></footer>
 </div>
 
+
+<button id="tg" class="fab" aria-label="Toggle light or dark theme">◐</button>
+<button id="cp" class="fab" aria-label="Jump to section">Jump<kbd>/</kbd></button>
+<div id="pal" role="dialog" aria-modal="true" aria-label="Jump to"><div class="bx"><input id="pq" placeholder="Jump to a section…" autocomplete="off" aria-label="Search sections"><ul id="pl2"></ul></div></div>
 <script>
 (function(){
- var i=document.getElementById('intro');
- function go(){i.classList.add('off')}
- document.getElementById('skip').onclick=go;
- setTimeout(go,2800);
- try{if(sessionStorage.getItem('seen'))go();sessionStorage.setItem('seen','1')}catch(e){}
+var d=document,R=d.documentElement,B=d.body,$=function(s){return d.querySelector(s)};
+function theme(t){if(t)R.setAttribute('data-theme',t);else R.removeAttribute('data-theme');var m=$('meta[name=theme-color]');if(m)m.content=t==='light'?'#fbf5f9':'#170f22'}
+var st=null;try{st=localStorage.getItem('xm_theme')}catch(e){}
+if(!st&&matchMedia('(prefers-color-scheme:light)').matches)st='light';
+theme(st==='light'?'light':null);
+$('#tg').onclick=function(){var l=R.getAttribute('data-theme')==='light';theme(l?null:'light');try{localStorage.setItem('xm_theme',l?'dark':'light')}catch(e){}};
+var pal=$('#pal'),pq=$('#pq'),pl=$('#pl2'),items=[],si=0;
+function build(){items=[].slice.call(d.querySelectorAll('nav .nl a[href^="#"],.fn a[href^="#"]')).map(function(a){return{t:a.textContent,h:a.getAttribute('href')}});items.unshift({t:'Top',h:'#'});items.push({t:'Stuck On You',h:'#stuck-on-you'})}
+function draw(){var q=pq.value.toLowerCase(),f=items.filter(function(i){return i.t.toLowerCase().indexOf(q)>-1});if(si>=f.length)si=0;pl.innerHTML='';f.forEach(function(i,n){var li=d.createElement('li');if(n===si)li.className='sel';li.innerHTML='<span></span><small>'+i.h+'</small>';li.firstChild.textContent=i.t;li.onclick=function(){go(i)};pl.appendChild(li)});pl._f=f}
+function go(i){close();if(i.h==='#')scrollTo({top:0,behavior:'smooth'});else{var t=$(i.h);if(t)t.scrollIntoView({behavior:'smooth'})}}
+function open(){build();pq.value='';si=0;draw();pal.classList.add('on');pq.focus()}
+function close(){pal.classList.remove('on')}
+$('#cp').onclick=open;pal.onclick=function(e){if(e.target===pal)close()};pq.oninput=function(){si=0;draw()};
+d.addEventListener('keydown',function(e){var on=pal.classList.contains('on'),tg=e.target.tagName;
+ if(!on&&!B.classList.contains('ed')&&((e.key==='/'&&tg!=='INPUT'&&!e.target.isContentEditable)||((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'))){e.preventDefault();open();return}
+ if(!on)return;var n=(pl._f||[]).length;
+ if(e.key==='Escape')close();else if(e.key==='ArrowDown'){e.preventDefault();si=(si+1)%n;draw()}else if(e.key==='ArrowUp'){e.preventDefault();si=(si-1+n)%n;draw()}else if(e.key==='Enter'&&pl._f[si])go(pl._f[si])});
+function filt(q){q=q.trim().toLowerCase();[].forEach.call(d.querySelectorAll('.film li'),function(li){li.classList.toggle('nm',!!q&&li.textContent.toLowerCase().indexOf(q)<0)})}
+d.addEventListener('input',function(e){if(e.target.id==='fq')filt(e.target.value)});
+new MutationObserver(function(){if(B.classList.contains('ed')){filt('');var f=$('#fq');if(f)f.value=''}}).observe(B,{attributes:true,attributeFilter:['class']});
+})();
+</script>
+<div id="sw" role="group" aria-label="Color theme"><button id="sp" aria-label="Previous color">‹</button><i></i><i></i><i></i><i></i><span id="sn">Rose</span><button id="sx" aria-label="Next color">›</button></div>
+<div id="hint">↔ Swipe the header to change colors</div><div id="wash"></div>
+<script>
+(function(){
+var d=document,R=d.documentElement,B=d.body,A=[['','Portfolio'],['aqua','Aqua'],['lilac','Lilac'],['gold','Sunset gold']],ix=0,$=function(s){return d.querySelector(s)};
+var dots=[].slice.call(d.querySelectorAll('#sw i'));
+function set(n,x){ix=(n+A.length)%A.length;if(A[ix][0])R.setAttribute('data-accent',A[ix][0]);else R.removeAttribute('data-accent');
+ dots.forEach(function(e,i){e.classList.toggle('on',i===ix)});$('#sn').textContent=A[ix][1];
+ try{localStorage.setItem('xm_accent',A[ix][0])}catch(e){}
+ if(x!==undefined){var w=$('#wash');w.style.setProperty('--wx',x+'px');w.classList.remove('on');void w.offsetWidth;w.classList.add('on')}}
+var sv='';try{sv=localStorage.getItem('xm_accent')||''}catch(e){}
+A.forEach(function(a,i){if(a[0]===sv)ix=i});set(ix);
+$('#sp').onclick=function(){set(ix-1,innerWidth/3)};$('#sx').onclick=function(){set(ix+1,innerWidth*.66)};
+var x0=0,y0=0,on=false;
+d.addEventListener('pointerdown',function(e){on=!B.classList.contains('ed')&&!!e.target.closest('.hero');x0=e.clientX;y0=e.clientY});
+d.addEventListener('pointerup',function(e){if(!on)return;on=false;var dx=e.clientX-x0,dy=e.clientY-y0;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.5)set(ix+(dx<0?1:-1),e.clientX)});
+d.addEventListener('pointercancel',function(){on=false});
+var h=$('#hint');try{if(!localStorage.getItem('xm_hint')){setTimeout(function(){h.classList.add('on')},3200);setTimeout(function(){h.classList.remove('on');localStorage.setItem('xm_hint','1')},7200)}}catch(e){}
+})();
+</script>
+<div id="fm" role="dialog" aria-modal="true"><div class="bx"><button id="fx" aria-label="Close">✕</button><time id="fy"></time><h3 id="ft"></h3><small id="fe" style="color:var(--mute)"></small><div id="fb"></div><div class="row"><a id="fa" target="_blank" rel="noopener" hidden>▶ Watch trailer / teaser →</a><button id="fd" class="btn" hidden>✎ Edit details</button></div></div></div>
+<script>
+(function(){
+var d=document,B=d.body,$=function(s){return d.querySelector(s)},cur=null;
+function esc(v){return String(v||'').replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function open(li){cur=li;var y=li.querySelector('i'),sp=li.querySelector('span'),em=li.querySelector('em');$('#fy').textContent=y?y.textContent:'';$('#ft').textContent=sp.firstChild.textContent;$('#fe').textContent=em?em.textContent:'';
+ var h=$('#fb');h.innerHTML='';[['Genre','g'],['Cast','cast'],['Synopsis','syn']].forEach(function(r){var v=li.dataset[r[1]];if(v){var p=d.createElement('p'),b=d.createElement('b');b.textContent=r[0];p.appendChild(b);p.appendChild(d.createTextNode(v));h.appendChild(p)}});
+ if(!h.firstChild){var p=d.createElement('p');p.textContent='Details coming soon.';h.appendChild(p)}
+ var a=$('#fa'),t=li.dataset.tr;a.hidden=!t;if(t)a.href=t;$('#fd').hidden=!B.classList.contains('ed');$('#fm').classList.add('on')}
+d.addEventListener('click',function(e){var li=e.target.closest&&e.target.closest('.film li');if(li&&!B.classList.contains('ed'))open(li)});
+d.addEventListener('dblclick',function(e){var li=e.target.closest&&e.target.closest('.film li');if(li&&B.classList.contains('ed'))open(li)});
+$('#fx').onclick=function(){$('#fm').classList.remove('on')};$('#fm').onclick=function(e){if(e.target.id==='fm')$('#fm').classList.remove('on')};
+d.addEventListener('keydown',function(e){if(e.key==='Escape')$('#fm').classList.remove('on')});
+$('#fd').onclick=function(){[['Genre','g'],['Cast','cast'],['Synopsis','syn'],['Trailer link (https://…)','tr']].forEach(function(r){var v=prompt(r[0],cur.dataset[r[1]]||'');if(v!==null){v=v.trim();if(r[1]==='tr'&&v&&!/^https?:\/\//.test(v))return;if(v)cur.dataset[r[1]]=v;else delete cur.dataset[r[1]]}});cur.dispatchEvent(new Event('input',{bubbles:true}));open(cur)};
+var X='<button class="ctl x" data-act="rm" aria-label="Remove">✕</button>',L='<button class="ctl l" data-act="link" aria-label="Edit link">🔗</button>';
+var T={aw:{q:['Award','Year','Project','Awarding body','Type win or nom'],c:'upd aw',f:function(v){return[' data-w="'+(/^n/i.test(v[4])?'nom':'win')+'"','<time>'+esc(v[1])+'</time><h3>'+esc(v[0])+'</h3><p>'+esc(v[2])+' · '+esc(v[3])+'</p><small><a href="#">Source →</a></small>'+X+L]}},
+ pr:{q:['Headline','Outlet','Date','Link (https://…)'],c:'upd',f:function(v){return['','<time>'+esc(v[2])+'</time><h3>'+esc(v[0])+'</h3><p>'+esc(v[1])+'</p><small><a href="'+(/^https?:\/\//.test(v[3])?esc(v[3]):'#')+'" target="_blank" rel="noopener">Read →</a></small>'+X+L]}},
+ mm:{q:['Message','Fan name'],c:'upd',f:function(v){return['','<time>Fan memory</time><h3>'+esc(v[1])+'</h3><p>'+esc(v[0])+'</p>'+X]}},
+ rg:{q:['Lane: drama, comedy, horror, kon or emo','Title','Short note','Clip link (https://…)'],c:'upd rg',f:function(v){var g=(v[0]||'drama').toLowerCase().slice(0,3);g={dra:'drama',com:'comedy',hor:'horror',kon:'kon',emo:'emo',vil:'kon',ant:'kon'}[g]||'drama';return[' data-g="'+g+'"','<time>Clip</time><h3>'+esc(v[1])+'</h3><p>'+esc(v[2])+'</p><small><a href="'+(/^https?:\/\//.test(v[3])?esc(v[3]):'#')+'" target="_blank" rel="noopener">Watch clip →</a></small>'+X+L]}}};
+d.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.ctl[data-n]');if(!b||!B.classList.contains('ed'))return;var t=T[b.dataset.n],v=[];for(var i=0;i<t.q.length;i++){var r=prompt(t.q[i]);if(r===null)return;v.push(r.trim())}
+ var o=t.f(v),a=d.createElement('article');a.className=t.c;if(o[0]){var m=o[0].match(/data-(\w+)="(\w+)"/);a.setAttribute('data-'+m[1],m[2])}a.innerHTML=o[1];$('#'+b.dataset.to).appendChild(a);a.dispatchEvent(new Event('input',{bubbles:true}));a.scrollIntoView({block:'center'})},true);
+})();
+</script>
+<script>document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.ar');if(!b)return;var r=b.parentNode.querySelector('.fr');r.scrollBy({left:(b.classList.contains('r')?1:-1)*(r.firstElementChild.offsetWidth+18),behavior:'smooth'})});</script>
+<div id="prog" aria-hidden="true"></div>
+<button id="top" aria-label="Back to top">↑</button>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Image viewer"><button id="lbx" aria-label="Close">✕</button><button id="lbp" aria-label="Previous">‹</button><button id="lbn" aria-label="Next">›</button><figure><img id="lbi" alt=""><figcaption id="lbc"></figcaption></figure></div>
+<script>
+(function(){
+var d=document,B=d.body,$=function(s){return d.querySelector(s)},$$=function(s){return[].slice.call(d.querySelectorAll(s))};
+var top=$('#top'),tick=0;
+function onScroll(){tick=0;var h=d.documentElement.scrollHeight-innerHeight;B.style.setProperty('--p',h>0?scrollY/h:0);top.classList.toggle('on',scrollY>700);
+ var cur=null,ls=$$('nav a[href^="#"]');ls.forEach(function(a){var t=$(a.getAttribute('href'));if(t&&t.getBoundingClientRect().top<innerHeight*.35)cur=a});
+ ls.forEach(function(a){if(a===cur){if(!a.hasAttribute('aria-current')){a.setAttribute('aria-current','true');var w=a.parentNode;w.scrollTo({left:a.offsetLeft-w.clientWidth/2+a.offsetWidth/2,behavior:'smooth'})}}else a.removeAttribute('aria-current')})}
+addEventListener('scroll',function(){if(!tick){tick=1;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+top.onclick=function(){scrollTo({top:0,behavior:'smooth'})};
+if(matchMedia('(hover:hover)').matches)d.addEventListener('pointermove',function(e){B.style.setProperty('--mx',e.clientX+'px');B.style.setProperty('--my',e.clientY+'px');B.style.setProperty('--ry',((e.clientX/innerWidth-.5)*12).toFixed(1)+'deg');B.style.setProperty('--rx',(-(e.clientY/innerHeight-.5)*9).toFixed(1)+'deg')},{passive:true});
+var lb=$('#lb'),im=$('#lbi'),cap=$('#lbc'),set=[],ix=0;
+function show(){var e=set[ix];im.src=e.currentSrc||e.src;im.alt=e.alt;var f=e.closest('figure,.card'),c=f&&f.querySelector('figcaption,h3');cap.textContent=c?c.textContent:e.alt;lb.classList.toggle('one',set.length<2);lb.classList.add('on')}
+function go(n){ix=(ix+n+set.length)%set.length;show()}
+function close(){lb.classList.remove('on')}
+d.addEventListener('click',function(e){if(B.classList.contains('ed'))return;var t=e.target.closest&&e.target.closest('.reel img,.card img,.poster img');if(!t||t.src.indexOf('data:')===0)return;var r=t.closest('.reel');set=r?[].slice.call(r.querySelectorAll('img')):[t];ix=set.indexOf(t);show()});
+$('#lbx').onclick=close;$('#lbp').onclick=function(){go(-1)};$('#lbn').onclick=function(){go(1)};
+lb.addEventListener('click',function(e){if(e.target===lb)close()});
+d.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')go(-1);if(e.key==='ArrowRight')go(1)});
+var sx=0;lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX},{passive:true});lb.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>50&&set.length>1)go(dx<0?1:-1)});
+var rl=null,px=0,sl=0;d.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse'||B.classList.contains('ed'))return;rl=e.target.closest('.reel');if(rl){px=e.clientX;sl=rl.scrollLeft}});
+d.addEventListener('pointermove',function(e){if(rl&&e.buttons)rl.scrollLeft=sl-(e.clientX-px)});d.addEventListener('pointerup',function(){rl=null});
 })();
 </script>
 <button id="ebtn" class="btn">✎ Edit</button><input type="file" id="fi" accept="image/*" multiple hidden>
@@ -312,6 +547,7 @@ body.ed #ep{display:block}
 <div id="ep"><div class="r"><b id="pl">Tap any text to style it</b><label><input type="checkbox" id="sc"> apply to all like this</label><span id="st" style="color:#ffb3cf"></span><button id="dn">Done</button></div>
 <div class="r"><select id="ff"></select><input type="number" id="fz" min="8" max="160" style="width:66px">px <input type="color" id="fc"><button id="fb"><b>B</b></button></div>
 <div class="r"><span class="t">Background<input type="color" id="bc"></span><button id="bx">No bg</button><span class="t">Corners<input type="range" id="br" min="0" max="40" value="0"></span><button id="bu">⬆ Parent</button></div>
+<div class="r"><button id="pa">🖼 Add picture</button><button id="pr">🗑 Remove pic</button><button id="ba">🖼 Background photo</button><button id="bn">✕ Bg photo</button><button id="pg">🖼 Page bg</button><button id="pn">✕ Page bg</button><button id="cs">↺ Clear my style</button><span class="t">Dim<input type="range" id="dm" min="0" max="90" value="45"></span></div>
 <details><summary>Theme (whole site)</summary><div class="r" id="th"></div><div class="r"><span class="t">Heading font<select id="hf"></select></span><span class="t">Body font<select id="bf"></select></span><span class="t">Base size<input type="range" id="bs" min="13" max="24" value="17"></span></div></details>
 <div class="r"><button id="ex">⬇ Backup HTML</button><button id="rs">Reset</button></div></div>
 <script>
@@ -332,7 +568,7 @@ function H(a){var h={apikey:KEY};if(a&&tok)h.Authorization='Bearer '+tok.access_
 function auth(body,gt){return fetch(U+'/auth/v1/token?grant_type='+gt,{method:'POST',headers:{apikey:KEY,'Content-Type':'application/json'},body:JSON.stringify(body)}).then(function(r){return r.json().then(function(j){if(!r.ok)throw new Error(j.error_description||j.msg||'Login failed');j.exp=Date.now()+(j.expires_in-60)*1000;tok=j;try{localStorage.setItem(SS,JSON.stringify(j))}catch(e){}return j})})}
 function tk(){try{tok=JSON.parse(localStorage.getItem(SS)||'null')}catch(e){tok=null}if(!tok)return Promise.reject();if(Date.now()<tok.exp)return Promise.resolve();return auth({refresh_token:tok.refresh_token},'refresh_token')}
 function up(b,cb){tk().then(function(){var n=Date.now()+'-'+Math.random().toString(36).slice(2,7)+'.jpg';return fetch(U+'/storage/v1/object/photos/'+n,{method:'POST',headers:Object.assign(H(1),{'Content-Type':'image/jpeg'}),body:b}).then(function(r){if(!r.ok)throw new Error('upload '+r.status);cb(U+'/storage/v1/object/public/photos/'+n)})}).catch(function(e){alert('Upload failed: '+((e&&e.message)||'please log in again'))})}
-fetch(U+'/rest/v1/site?id=eq.1&select=html,vars',{headers:H()}).then(function(r){return r.json()}).then(function(a){var d=a&&a[0];if(d&&d.html){site.innerHTML=d.html;if(d.vars)root.setAttribute('style',d.vars)}}).catch(function(){});
+fetch(U+'/rest/v1/site?id=eq.1&select=html,vars',{headers:H()}).then(function(r){return r.json()}).then(function(a){var d=a&&a[0];if(d&&d.html&&d.html.indexOf('id="highlights"')>-1){site.innerHTML=d.html;if(d.vars)root.setAttribute('style',d.vars)}}).catch(function(){});
 function refresh(){if(B.classList.contains('ed'))$$(T,site).forEach(function(e){e.setAttribute('contenteditable','true')})}
 function setEd(on){B.classList.toggle('ed',on);if(on)refresh();else{$$('[contenteditable]',site).forEach(function(e){e.removeAttribute('contenteditable')});sel(null);save()}}
 $('#ebtn').onclick=function(){tk().then(function(){setEd(true)}).catch(function(){$('#lg').style.display='grid';$('#lp').focus()})};
@@ -342,10 +578,37 @@ $('#lo').onclick=function(){$('#lm').textContent='Logging in...';auth({email:$('
 function hex(c){var m=c.match(/\d+/g)||[0,0,0];return'#'+[0,1,2].map(function(i){return('0'+(+m[i]).toString(16)).slice(-2)}).join('')}
 function key(e){return e.classList.length?e.tagName.toLowerCase()+'.'+e.classList[0]:e.tagName.toLowerCase()}
 function sel(e){if(cur)cur.removeAttribute('data-sel');cur=e;if(!e)return;e.setAttribute('data-sel','');var cs=getComputedStyle(e);$('#pl').textContent='Editing: '+key(e);$('#fz').value=Math.round(parseFloat(cs.fontSize));$('#fc').value=hex(cs.color);var fam=cs.fontFamily.split(',')[0].replace(/["']/g,'').trim();$('#ff').value=F.indexOf(fam)>-1?fam:'';var bg=cs.backgroundColor;$('#bc').value=(bg.indexOf('rgba')===0||bg==='transparent')?'#000000':hex(bg);$('#br').value=parseInt(cs.borderRadius)||0}
-function ap(p,v){if(!cur)return;var els=$('#sc').checked?$$(key(cur),site):[cur];els.forEach(function(e){e.style[p]=v});save()}
+var TX={color:1,fontFamily:1,fontSize:1,fontWeight:1},lastRange=null,lastSp=null;
+document.addEventListener('selectionchange',function(){if(!B.classList.contains('ed'))return;var sl=getSelection();if(!sl.rangeCount)return;var r=sl.getRangeAt(0);if(!site.contains(r.commonAncestorContainer))return;if(!r.collapsed){lastRange=r.cloneRange();lastSp=null;$('#pl').textContent='Editing: selected text only'}else{lastRange=null;lastSp=null}});
+$('#ep').addEventListener('pointerdown',function(e){if(e.target.tagName==='BUTTON')e.preventDefault()});
+function apt(p,v){if(!TX[p])return false;if(lastSp&&lastSp.isConnected){lastSp.style[p]=v;save();return true}
+ if(lastRange&&cur&&cur.contains(lastRange.commonAncestorContainer)){var sp=document.createElement('span');sp.style[p]=v;sp.appendChild(lastRange.extractContents());lastRange.insertNode(sp);lastSp=sp;lastRange=null;save();return true}
+ return false}
+var CL=['color','fontFamily','fontSize','fontWeight','background','backgroundImage','backgroundSize','backgroundPosition','backgroundRepeat','borderRadius'];
+$('#cs').onclick=function(){E().forEach(function(e){CL.forEach(function(k){e.style[k]=''});e.removeAttribute('data-bgu');$$('span[style]:not([class])',e).forEach(function(sp){while(sp.firstChild)sp.parentNode.insertBefore(sp.firstChild,sp);sp.remove()});if(!e.getAttribute('style'))e.removeAttribute('style')});lastSp=null;save()};
+function ap(p,v){if(!cur)return;if(apt(p,v))return;var els=$('#sc').checked?$$(key(cur),site):[cur];els.forEach(function(e){e.style[p]=v});save()}
 $('#ff').onchange=function(){ap('fontFamily',this.value?'"'+this.value+'",sans-serif':'')};
 $('#fz').oninput=function(){if(this.value)ap('fontSize',this.value+'px')};
 $('#fc').oninput=function(){ap('color',this.value)};
+function E(){return cur?($('#sc').checked?$$(key(cur),site):[cur]):[]}
+function bgc(u,d){return'linear-gradient(rgba(0,0,0,'+d+'),rgba(0,0,0,'+d+')),url("'+u+'")'}
+function ask(cb){fi.accept='image/*';pick=cb;fi.multiple=false;fi.click()}
+function vhtml(u){var m=u.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|shorts\/|embed\/))([\w-]{11})/);
+ if(m)return'<div class="vb"><iframe src="https://www.youtube.com/embed/'+m[1]+'" allowfullscreen loading="lazy" allow="fullscreen; picture-in-picture"></iframe></div>';
+ if(/\.(mp4|webm|mov)(\?|$)/i.test(u))return'<div class="vb"><video controls playsinline preload="metadata" src="'+u+'"></video></div>';
+ return'<div class="vb link"><a href="'+u+'" target="_blank" rel="noopener">▶ Watch video</a></div>'}
+function upv(f,cb){setSt('Uploading video...');tk().then(function(){var n=Date.now()+'-'+Math.random().toString(36).slice(2,7)+'.'+((f.name.split('.').pop()||'mp4').toLowerCase());return fetch(U+'/storage/v1/object/photos/'+n,{method:'POST',headers:Object.assign(H(1),{'Content-Type':f.type||'video/mp4'}),body:f}).then(function(r){if(!r.ok)throw new Error('upload '+r.status);setSt('Saved ✓');cb(U+'/storage/v1/object/public/photos/'+n)})}).catch(function(e){setSt('');alert('Video upload failed: '+((e&&e.message)||'log in again'))})}
+$('#pa').onclick=function(){if(!cur){alert('Tap an item first, like a film title');return}
+ ask(function(u){if(cur.tagName==='IMG'){cur.src=u}else{var im=document.createElement('img');im.className='pic';im.alt='';im.src=u;
+  if(cur.matches('.film li')){var y=$('i',cur);cur.classList.add('haspic');if(y)y.insertAdjacentElement('afterend',im);else cur.insertBefore(im,cur.firstChild)}else cur.insertBefore(im,cur.firstChild)}
+  refresh();save()})};
+$('#pr').onclick=function(){if(!cur)return;var im=(cur.tagName==='IMG'&&cur.classList.contains('pic'))?cur:$('.pic',cur);if(!im)return;var li=im.closest('.film li');im.remove();if(li&&!$('.pic',li))li.classList.remove('haspic');sel(null);save()};
+$('#ba').onclick=function(){if(!cur){alert('Tap a section or card first');return}
+ ask(function(u){E().forEach(function(e){e.dataset.bgu=u;e.style.backgroundImage=bgc(u,$('#dm').value/100);e.style.backgroundSize='cover';e.style.backgroundPosition='center';e.style.backgroundRepeat='no-repeat'});save()})};
+$('#bn').onclick=function(){E().forEach(function(e){e.removeAttribute('data-bgu');e.style.backgroundImage='';e.style.backgroundSize='';e.style.backgroundPosition=''});save()};
+$('#dm').oninput=function(){var d=this.value/100;E().forEach(function(e){if(e.dataset.bgu)e.style.backgroundImage=bgc(e.dataset.bgu,d)});save()};
+$('#pg').onclick=function(){ask(function(u){root.style.setProperty('--pgimg',bgc(u,.55));save()})};
+$('#pn').onclick=function(){root.style.removeProperty('--pgimg');save()};
 $('#bc').oninput=function(){ap('background',this.value)};
 $('#bx').onclick=function(){ap('background','')};
 $('#br').oninput=function(){ap('borderRadius',this.value+'px')};
@@ -354,17 +617,17 @@ document.addEventListener('click',function(e){if(!B.classList.contains('ed'))ret
 $('#fb').onclick=function(){if(cur)ap('fontWeight',parseInt(getComputedStyle(cur).fontWeight)>=600?'300':'700')};
 document.addEventListener('focusin',function(e){if(!B.classList.contains('ed'))return;var t=e.target.closest&&e.target.closest(T);if(t&&site.contains(t))sel(t)});
 document.addEventListener('input',function(e){if(site.contains(e.target))save()});
-var th=$('#th');[['--rose','Accent'],['--rose2','Accent 2'],['--blue','Blue'],['--ink','Background'],['--ink2','Cards'],['--text','Text'],['--mute','Muted']].forEach(function(v){var l=document.createElement('label');l.className='t';l.innerHTML=v[1]+'<input type="color">';var i=l.firstElementChild||l.querySelector('input');i=l.querySelector('input');i.value=hex(getComputedStyle(root).getPropertyValue(v[0]).trim().length==7?(function(h){return'rgb('+parseInt(h.substr(1,2),16)+','+parseInt(h.substr(3,2),16)+','+parseInt(h.substr(5,2),16)+')'})(getComputedStyle(root).getPropertyValue(v[0]).trim()):'rgb(0,0,0)');i.oninput=function(){root.style.setProperty(v[0],i.value);save()};th.appendChild(l)});
+var th=$('#th');[['--rose','Accent'],['--rose2','Accent 2'],['--blue','Blue'],['--ink','Background'],['--ink2','Cards'],['--text','Text'],['--mute','Muted'],['--line','Borders']].forEach(function(v){var l=document.createElement('label');l.className='t';l.innerHTML=v[1]+'<input type="color">';var i=l.firstElementChild||l.querySelector('input');i=l.querySelector('input');i.value=hex(getComputedStyle(root).getPropertyValue(v[0]).trim().length==7?(function(h){return'rgb('+parseInt(h.substr(1,2),16)+','+parseInt(h.substr(3,2),16)+','+parseInt(h.substr(5,2),16)+')'})(getComputedStyle(root).getPropertyValue(v[0]).trim()):'rgb(0,0,0)');i.oninput=function(){root.style.setProperty(v[0],i.value);save()};th.appendChild(l)});
 $('#hf').onchange=function(){root.style.setProperty('--serif',this.value?'"'+this.value+'",Georgia,serif':"'Gloock',Georgia,serif");save()};
 $('#bf').onchange=function(){root.style.setProperty('--sans',this.value?'"'+this.value+'",system-ui,sans-serif':"'Outfit',system-ui,sans-serif");save()};
 $('#bs').oninput=function(){root.style.setProperty('--fs',this.value+'px');save()};
 var fi=$('#fi');
-function rd(f,cb){var r=new FileReader();r.onload=function(){var i=new Image();i.onload=function(){var s=Math.min(1,1000/Math.max(i.width,i.height)),c=document.createElement('canvas');c.width=i.width*s;c.height=i.height*s;c.getContext('2d').drawImage(i,0,0,c.width,c.height);c.toBlob(function(b){up(b,cb)},'image/jpeg',.82)};i.src=r.result};r.readAsDataURL(f)}
-fi.onchange=function(){var fs=[].slice.call(fi.files);fi.value='';if(!fs.length)return;
+function rd(f,cb,m){var r=new FileReader();r.onload=function(){var i=new Image();i.onload=function(){var s=Math.min(1,(m||1000)/Math.max(i.width,i.height)),c=document.createElement('canvas');c.width=i.width*s;c.height=i.height*s;c.getContext('2d').drawImage(i,0,0,c.width,c.height);c.toBlob(function(b){up(b,cb)},'image/jpeg',.82)};i.src=r.result};r.readAsDataURL(f)}
+fi.onchange=function(){var fs=[].slice.call(fi.files);fi.value='';if(!fs.length)return;fi.accept='image/*';if(pick&&pick.v){pick.v(fs[0]);return}
  if(pick==='add'){fs.forEach(function(f){rd(f,function(u){var g=document.createElement('figure');g.innerHTML='<img src="'+u+'" alt="Fan photo"><figcaption><b>Caption</b>Year</figcaption>'+X;var r=$('.reel',site);r.appendChild(g);r.scrollLeft=r.scrollWidth;refresh();save()})})}
- else if(pick)rd(fs[0],function(u){pick.src=u;save()})};
+ else if(typeof pick==='function')rd(fs[0],pick,1600);else if(pick)rd(fs[0],function(u){pick.src=u;save()})};
 function addTo(sel,html,tag,cls){var d=document.createElement(tag);d.className=cls;d.innerHTML=html;$(sel,site).appendChild(d);refresh();save();d.scrollIntoView({block:'center'})}
-document.addEventListener('click',function(e){if(!B.classList.contains('ed')||!site.contains(e.target))return;var t=e.target;
+document.addEventListener('click',function(e){if(!B.classList.contains('ed')||!site.contains(e.target))return;var t=e.target;fi.accept='image/*';
  if(t.closest('a')&&!t.closest('.ctl'))e.preventDefault();
  var b=t.closest('.ctl');
  if(b){var a=b.dataset.act,it=b.closest('.fp,.fpg,figure,.upd,.ann');
@@ -372,11 +635,13 @@ document.addEventListener('click',function(e){if(!B.classList.contains('ed')||!s
   else if(a==='link'){var k=$('a',it),u=prompt('Link (https://...)',k.getAttribute('href'));if(u!==null){k.setAttribute('href',u);if(u&&u!=='#'){k.target='_blank';k.rel='noopener'}save()}}
   else if(a==='addph'){pick='add';fi.multiple=true;fi.click()}
   else if(a==='addp')addTo('#fplist','<img src="'+PH+'" alt="Fan project"><div><span class="pill">Fan project</span><h3>Project title</h3><p>Describe the project.</p><small><a href="#">Visit project →</a></small></div>'+X+L,'article','card fp');
+  else if(a==='addv'){fi.accept='video/*';pick={v:function(f){if(f.size>50*1048576){alert('Too big: the free Supabase limit is 50 MB per file. Use + Video link instead.');return}upv(f,function(u){addTo('#vlist',vhtml(u)+'<figcaption>Video caption</figcaption>'+X,'figure','vid')})}};fi.click()}
+  else if(a==='addl'){var u=prompt('Paste a video link (YouTube or direct .mp4)');if(u){u=u.trim().replace(/"/g,'%22');addTo('#vlist',vhtml(u)+'<figcaption>Video caption</figcaption>'+X,'figure','vid')}}
   else if(a==='addu')addTo('#ulist','<time>Date</time><h3>Update title</h3><p>What is new?</p><small><a href="#">Source →</a></small>'+X+L,'article','upd');
   else if(a==='adda')addTo('#alist','<time>Date</time><h3>Announcement title</h3><p>Write the announcement.</p>'+X,'article','ann');
   else if(a==='addf')addTo('#fglist','<a href="#"><b>Fan page name</b><small>@handle · Platform</small></a>'+X+L,'div','fpg');
   return}
- if(t.tagName==='IMG'){pick=t;fi.multiple=false;fi.click()}
+ if(t.tagName==='IMG'){if(t.classList.contains('pic'))sel(t);else{pick=t;fi.multiple=false;fi.click()}}
 },true);
 $('#ex').onclick=function(){var d=root.cloneNode(true);$('#site',d).innerHTML=snap(true);var o=$('#intro',d);if(o)o.classList.remove('off');B.classList.remove('ed');var h='<!DOCTYPE html>\n'+d.outerHTML,a=document.createElement('a');a.href=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.download='index.html';a.click()};
 $('#rs').onclick=function(){if(confirm('Reset the site back to the original design for everyone?')){tk().then(function(){return fetch(U+'/rest/v1/site?id=eq.1',{method:'PATCH',headers:Object.assign(H(1),{'Content-Type':'application/json'}),body:JSON.stringify({html:'',vars:''})})}).then(function(){location.reload()}).catch(function(){alert('Log in first')})}};
