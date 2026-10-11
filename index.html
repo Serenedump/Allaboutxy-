@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xyriel Manabat — Dossier</title>
+<meta property="og:image" content="https://allaboutxyrielmanabat.netlify.app/images/18th-rose-2026.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&family=Bebas+Neue&family=Pacifico&family=Caveat&family=Space+Grotesk:wght@300;500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#170f22;--ink2:#22162f;--line:#3a2a4d;--rose:#ff4f8b;--rose2:#ffb3cf;--blue:#7b8cff;--text:#f1e9f7;--mute:#a595b8;
+--serif:'Gloock',Georgia,serif;--sans:'Outfit',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{background:var(--ink);color:var(--text);font:300 var(--fs,17px)/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+section{padding:84px 0}
+h2{font:400 clamp(30px,5vw,46px)/1.1 var(--serif);margin-bottom:28px}
+p{max-width:62ch}
+
+/* intro */
+#intro{position:fixed;inset:0;z-index:99;background:#0b0612;display:grid;place-items:center;text-align:center;transition:opacity .6s,visibility .6s}
+#intro.off{opacity:0;visibility:hidden}
+#intro .box{font-family:ui-monospace,Menlo,monospace;color:var(--rose2);font-size:14px;padding:20px}
+#intro h1{font:400 clamp(30px,8vw,56px)/1 var(--serif);color:var(--text);margin-bottom:22px;letter-spacing:.02em}
+#intro .bar{width:min(300px,70vw);height:6px;margin:18px auto;background:var(--line);border-radius:3px;overflow:hidden}
+#intro .bar i{display:block;height:100%;width:0;background:var(--rose);animation:load 2.4s steps(12) forwards}
+@keyframes load{to{width:100%}}
+#intro button{margin-top:14px;background:none;border:1px solid var(--line);color:var(--mute);padding:6px 14px;border-radius:99px;font:inherit;cursor:pointer}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:rgba(23,15,34,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:22px;align-items:center;height:56px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+nav b{font:400 18px var(--serif);color:var(--rose);margin-right:auto}
+nav a{text-decoration:none;color:var(--mute);font-size:15px}
+nav a:hover{color:var(--text)}
+
+/* hero */
+.hero{padding:70px 0 90px;background:radial-gradient(900px 500px at 85% 20%,rgba(255,79,139,.22),transparent 60%),radial-gradient(700px 500px at 0 100%,rgba(123,140,255,.16),transparent 60%)}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+.hero h1{font:400 clamp(54px,11vw,128px)/.9 var(--serif);letter-spacing:-.02em}
+.hero h1 span{display:block;color:transparent;-webkit-text-stroke:1.5px var(--rose);}
+.tag{font:400 clamp(20px,3vw,28px) var(--serif);color:var(--rose2);margin:26px 0 12px}
+.poster{position:relative;transform:rotate(2.5deg);border-radius:6px;box-shadow:0 30px 70px rgba(0,0,0,.55);border:6px solid #fff}
+.poster figcaption{position:absolute;left:-14px;bottom:18px;background:var(--rose);color:#fff;font-weight:600;font-size:14px;padding:6px 14px;border-radius:3px;transform:rotate(-3deg)}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.stats div{border:1px solid var(--line);background:var(--ink2);border-radius:99px;padding:6px 16px;font-size:14px;color:var(--mute)}
+.stats b{color:var(--text);font-weight:600}
+
+/* bio */
+.bio .wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px 56px}
+.bio h2{grid-column:1/-1}
+.bio p:first-of-type::first-letter{font:400 64px/.8 var(--serif);float:left;color:var(--rose);margin:6px 10px 0 0}
+.bio p{margin-bottom:18px}
+
+/* socials */
+.soc{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.soc a{border:1px solid var(--line);background:var(--ink2);border-radius:14px;padding:18px;text-decoration:none;transition:border-color .2s,transform .2s}
+.soc a:hover{border-color:var(--rose);transform:translateY(-3px)}
+.soc b{display:block;font:400 20px var(--serif)}
+.soc small{color:var(--mute);font-size:14px}
+.note{color:var(--mute);font-size:15px;margin-bottom:22px}
+
+/* timeline */
+.tl{position:relative;margin-left:8px;border-left:2px solid var(--line)}
+.tl li{list-style:none;position:relative;padding:0 0 30px 34px}
+.tl li::before{content:"";position:absolute;left:-8px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--ink);border:3px solid var(--rose)}
+.tl li.gap::before{border-color:var(--line);border-style:dashed}
+.tl li.gap{opacity:.75}
+.tl time{font:400 15px var(--sans);color:var(--rose2);font-weight:600}
+.tl h3{font:400 24px/1.2 var(--serif);margin:2px 0 4px}
+.tl p{color:var(--mute);font-size:16px}
+
+/* now showing */
+.show{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.card{background:var(--ink2);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.card img{aspect-ratio:4/3;object-fit:cover;width:100%;background:var(--line)}
+.card div{padding:22px}
+.pill{display:inline-block;background:var(--rose);color:#fff;font-size:13px;font-weight:600;padding:3px 12px;border-radius:99px;margin-bottom:10px}
+.pill.b{background:var(--blue);color:#12102a}
+.card h3{font:400 28px/1.15 var(--serif);margin-bottom:8px}
+.card p{font-size:16px;color:#d6cae4}
+.card small{display:block;margin-top:12px;color:var(--mute)}
+
+/* filmography */
+.film{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.film h3{font:400 22px var(--serif);color:var(--rose2);padding-bottom:10px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.film li{list-style:none;display:grid;grid-template-columns:48px 1fr;gap:8px;padding:7px 0;font-size:15px;line-height:1.4;border-bottom:1px dotted var(--line)}
+.film li i{font-style:normal;color:var(--rose);font-weight:600}
+.film li em{display:block;font-style:normal;color:var(--mute);font-size:13px}
+
+/* film strip */
+.strip{background:#0b0612;border-block:1px solid var(--line);padding:30px 0}
+.reel{display:flex;gap:14px;overflow-x:auto;padding:26px 22px;scroll-snap-type:x mandatory;background:
+ repeating-linear-gradient(90deg,#2a1d3a 0 14px,transparent 14px 28px) top/100% 10px no-repeat,
+ repeating-linear-gradient(90deg,#2a1d3a 0 14px,transparent 14px 28px) bottom/100% 10px no-repeat}
+.reel figure{flex:0 0 min(300px,78vw);scroll-snap-align:center;margin:6px 0}
+.reel img{height:380px;width:100%;object-fit:cover;border-radius:3px;filter:saturate(.9);background:var(--line)}
+.reel figcaption{margin-top:10px;font-size:14px;color:var(--mute)}
+.reel figcaption b{color:var(--text);font-weight:600;margin-right:6px}
+
+footer{padding:50px 0 70px;color:var(--mute);font-size:14px;text-align:center}
+footer b{color:var(--rose2);font-weight:400}
+
+
+/* editor */
+.ctl{display:none}body.ed .ctl{display:inline-flex}
+.btn{background:var(--rose);color:#fff;border:0;border-radius:99px;padding:8px 16px;font:600 14px var(--sans);cursor:pointer}
+.x,.l{position:absolute;top:8px;width:30px;height:30px;border-radius:50%;border:0;background:#000b;color:#fff;align-items:center;justify-content:center;cursor:pointer;z-index:3}
+.x{right:8px}.l{right:44px}
+.card,.fpg,.reel figure{position:relative}
+.fpg{display:flex}.fpg a{flex:1}
+body.ed{padding-bottom:46vh}
+body.ed [contenteditable]{outline:1px dashed #ffb3cf55;outline-offset:2px}
+body.ed [data-sel]{outline:2px solid #ff4f8b!important}
+body.ed img{cursor:pointer;outline:1px dashed #7b8cff}
+#ebtn{position:fixed;right:14px;bottom:14px;z-index:90;opacity:.8}
+body.ed #ebtn{display:none}
+#ep{display:none;position:fixed;left:0;right:0;bottom:0;z-index:95;max-height:44vh;overflow:auto;background:#120a1c;color:#f1e9f7;border-top:2px solid #ff4f8b;padding:10px 14px;font:14px system-ui,sans-serif}
+body.ed #ep{display:block}
+#ep .r{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:6px 0}
+#ep select,#ep input[type=number],#ep button{font:inherit;padding:6px 8px;border-radius:8px;border:1px solid #3a2a4d;background:#22162f;color:#f1e9f7}
+#ep input[type=color]{width:38px;height:32px;padding:0;border:0;background:none}
+#ep .t{display:flex;flex-direction:column;align-items:center;font-size:11px;color:#a595b8}
+#ep summary{cursor:pointer;color:#ffb3cf;margin:6px 0}
+.upd,.ann{position:relative;background:var(--ink2);border:1px solid var(--line);border-radius:14px;padding:18px 54px 18px 20px;margin-bottom:14px}
+.ann.pin{border-color:var(--rose)}
+.upd time,.ann time{color:var(--rose2);font-weight:600;font-size:14px}
+.upd h3,.ann h3{font:400 22px/1.2 var(--serif);margin:4px 0}
+.upd p,.ann p{color:#d6cae4;font-size:16px}
+.upd a{color:var(--rose2)}
+@media(max-width:820px){
+ section{padding:60px 0}
+ .hero .wrap,.bio .wrap,.show,.film{grid-template-columns:1fr}
+ .poster{max-width:330px;margin:10px auto 0}
+ .film{gap:40px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div id="intro" role="dialog" aria-label="Intro">
+ <div class="box">
+  <h1>Xyriel Nation</h1>
+  <div>Dialing…</div>
+  <div class="bar"><i></i></div>
+  <div>Handshake OK — loading dossier</div>
+  <button id="skip">Skip intro</button>
+ </div>
+</div>
+
+<div id="site">
+<nav><div class="wrap">
+ <b>Xyriel Nation</b>
+ <a href="#announcements">Announcements</a><a href="#bio">Bio</a><a href="#socials">Socials</a><a href="#timeline">Timeline</a><a href="#now-showing">Now showing</a><a href="#updates">Updates</a><a href="#filmography">Filmography</a><a href="#gallery">Clippings</a><a href="#projects">Fan projects</a><a href="#fanpages">Fan pages</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+ <div>
+  <h1>Xyriel <span>Manabat</span></h1>
+  <p class="tag">Child star. Leading lady.</p>
+  <p>From third runner-up on a kiddie talent search to top-billed in Netflix's first Filipino original of 2026. A career in two acts, with a six-year quiet stretch in between.</p>
+  <div class="stats">
+   <div>Born <b>Jan 27, 2004</b></div>
+   <div>Debut <b>2009</b></div>
+   <div>Comeback <b>2023</b></div>
+   <div>Next <b>Stuck On You, Oct 2026</b></div>
+  </div>
+ </div>
+ <figure class="poster">
+  <img src="images/18th-rose-2026.png" alt="18th Rose Netflix poster, 2026">
+  <figcaption>Now on Netflix</figcaption>
+ </figure>
+</div></header>
+
+<section id="announcements"><div class="wrap"><h2>Announcement board</h2><div id="alist"><article class="ann pin"><time>📌 Pinned</time><h3>Welcome to Xyriel Nation</h3><p>Unofficial fan site. Announcements for the fans will be posted here.</p><button class="ctl x" data-act="rm" aria-label="Remove">✕</button></article><article class="ann"><time>Reminder</time><h3>Support the official accounts</h3><p>Follow and tag her verified accounts, and keep every post kind.</p><button class="ctl x" data-act="rm" aria-label="Remove">✕</button></article></div><p><button class="ctl btn" data-act="adda">+ Add announcement</button></p></div></section>
+
+<section id="bio" class="bio"><div class="wrap">
+ <h2>The file on Xyriel</h2>
+ <div>
+  <p>Xyriel Anne Bustamante Manabat placed third runner-up on <i>Star Circle Kid Quest</i> in 2009, the talent search that put her on ABS-CBN's radar as a child performer.</p>
+  <p>Her breakout came fast: a dual role as identical twins in the fantasy drama <i>Agua Bendita</i> (2010), then her film debut in <i>Ang Tanging Ina Mo: Last Na 'To!</i>, which won her Best Child Performer at both the Metro Manila Film Festival and the Star Awards.</p>
+ </div>
+ <div>
+  <p><i>100 Days to Heaven</i> (2011) made her one of the country's most recognizable child stars, and in 2012 she headlined month-long specials of <i>Wansapanataym</i>.</p>
+  <p>After a brief turn in <i>Wildflower</i> (2017), she stepped away for six years, then returned in 2023 with <i>Dirty Linen</i> and <i>Senior High</i>. A stacked 2025 followed, six onscreen roles plus <i>Pinoy Big Brother: Celebrity Collab Edition</i>. In 2026 she took her first lead in a Netflix original, opposite longtime friend Kyle Echarri.</p>
+ </div>
+</div></section>
+
+<section id="socials" style="background:var(--ink2);border-block:1px solid var(--line)"><div class="wrap">
+ <h2>Official accounts</h2>
+ <p class="note">Verified handles only. There are a lot of fan and lookalike accounts, so double-check before you follow.</p>
+ <div class="soc">
+  <a href="https://www.instagram.com/xyrielmanabat_/" target="_blank" rel="noopener"><b>Instagram</b><small>@xyrielmanabat_</small></a>
+  <a href="https://x.com/xmnbt" target="_blank" rel="noopener"><b>X / Twitter</b><small>@xmnbt</small></a>
+  <a href="https://www.tiktok.com/@xyrielmanabat_" target="_blank" rel="noopener"><b>TikTok</b><small>@xyrielmanabat_</small></a>
+  <a href="https://www.facebook.com/officialxymanabat/" target="_blank" rel="noopener"><b>Facebook</b><small>Official Page</small></a>
+  <a href="https://www.youtube.com/results?search_query=xyriel+manabat+vlogs" target="_blank" rel="noopener"><b>YouTube</b><small>Xyriel Manabat Vlogs</small></a>
+ </div>
+</div></section>
+
+<section id="timeline"><div class="wrap">
+ <h2>Two acts, one comeback</h2>
+ <ol class="tl">
+  <li><time>2009</time><h3>Star Circle Kid Quest</h3><p>Third runner-up in the ABS-CBN talent search, her way into show business.</p></li>
+  <li><time>2010</time><h3>Agua Bendita</h3><p>Breakthrough as identical twins in the fantasy drama.</p></li>
+  <li><time>2010</time><h3>Ang Tanging Ina Mo: Last Na 'To!</h3><p>Film debut as Monay Montecillo. Best Child Performer at the MMFF and Star Awards.</p></li>
+  <li><time>2011</time><h3>100 Days to Heaven</h3><p>Named Most Popular Female Child Performer at the Box Office Entertainment Awards.</p></li>
+  <li><time>2012</time><h3>Wansapanataym</h3><p>Headlines month-long specials, plus a spirit role in the horror film <i>Amorosa</i>.</p></li>
+  <li class="gap"><time>2017 – 2023</time><h3>The quiet years</h3><p>A brief appearance in <i>Wildflower</i>, then a six-year break from acting.</p></li>
+  <li><time>2023</time><h3>Dirty Linen · Senior High</h3><p>Returns in two ensemble dramas, rebuilding as a teenage actress.</p></li>
+  <li><time>2024 – 2025</time><h3>Sunshine to a stacked 2025</h3><p><i>PBB Collab</i>, <i>It's Okay to Not Be Okay</i>, <i>Near Death</i>, <i>The Last Beergin</i> and <i>Love You So Bad</i>.</p></li>
+  <li><time>2026</time><h3>18th Rose</h3><p>First lead film role, opposite Kyle Echarri, in Netflix's first Philippine original of the year.</p></li>
+  <li><time>Oct 2026</time><h3>Stuck On You</h3><p>A rom-com with River Joseph at the Puregold CinePanalo Film Festival.</p></li>
+ </ol>
+</div></section>
+
+<section id="now-showing" style="background:var(--ink2);border-block:1px solid var(--line)"><div class="wrap">
+ <h2>Now showing</h2>
+ <div class="show">
+  <article class="card">
+   <img src="images/18th-rose-2026.png" alt="18th Rose Netflix poster" loading="lazy">
+   <div><span class="pill">On Netflix</span>
+   <h3>18th Rose (2026)</h3>
+   <p>Early-2000s Romblon. Xyriel plays Rose, a teen trying to pull off the perfect debut party with nothing but a dial-up connection working against her. Kyle Echarri co-stars as Jordan, the new kid in town.</p>
+   <small>With Kyle Echarri · first Philippine Netflix original of 2026</small></div>
+  </article>
+  <article class="card" id="stuck-on-you">
+   <img src="images/stuck-on-you-2026.jpeg" alt="Xyriel Manabat and River Joseph promoting Stuck On You" loading="lazy">
+   <div><span class="pill b">In cinemas October 2026</span>
+   <h3>Stuck On You (2026)</h3>
+   <p>Her first rom-com lead: Sheryl Bunga opposite River Joseph's Max de Dios in a friends-to-something-more comedy. A lighter, kilig-filled turn after years of drama.</p>
+   <small>With River Joseph · directed by Mikko Baldoza · Puregold CinePanalo</small></div>
+  </article>
+ </div>
+</div></section>
+
+<section id="updates"><div class="wrap"><h2>Latest updates</h2><div id="ulist"><article class="upd"><time>October 2026</time><h3>Stuck On You is in cinemas</h3><p>Her first rom-com lead, opposite River Joseph, directed by Mikko Baldoza, at the Puregold CinePanalo Film Festival.</p><small><a href="#">Source →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd"><time>2026</time><h3>18th Rose is streaming</h3><p>Her first lead film role, opposite Kyle Echarri, on Netflix.</p><small><a href="#">Source →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article><article class="upd"><time>Upcoming</time><h3>The Secrets of Hotel 88</h3><p>TV series, playing Chesca Endaya.</p><small><a href="#">Source →</a></small><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article></div><p><button class="ctl btn" data-act="addu">+ Add update</button></p></div></section>
+
+<section id="filmography"><div class="wrap">
+ <h2>Filmography</h2>
+ <div class="film">
+  <div><h3>Recent</h3><ul>
+   <li><i>2026</i><span>The Secrets of Hotel 88<em>TV, upcoming · Chesca Endaya</em></span></li>
+   <li><i>2026</i><span>Stuck On You<em>Film · Sheryl Bunga</em></span></li>
+   <li><i>2026</i><span>18th Rose<em>Film · Rose</em></span></li>
+   <li><i>2025</i><span>It's Okay to Not Be Okay<em>TV · Madeth</em></span></li>
+   <li><i>2025</i><span>Love You So Bad<em>Film · Belai</em></span></li>
+   <li><i>2025</i><span>Near Death<em>Film · Mia</em></span></li>
+   <li><i>2025</i><span>The Last Beergin<em>Film · Sandy</em></span></li>
+   <li><i>2025</i><span>Kontrabida Academy<em>Film · Mimi</em></span></li>
+   <li><i>2025</i><span>Wish Ko Lang!, "Rabies"<em>TV · Jamaica Seraspe</em></span></li>
+   <li><i>2025</i><span>Pinoy Big Brother: Celebrity Collab Edition<em>Housemate</em></span></li>
+   <li><i>2024</i><span>Sunshine<em>Film · Thea</em></span></li>
+  </ul></div>
+  <div><h3>The comeback</h3><ul>
+   <li><i>2023</i><span>Senior High<em>TV · Roxanne "Roxy" Cristobal</em></span></li>
+   <li><i>2023</i><span>Dirty Linen<em>TV · Antonette "Tonet" Feiro Pavia</em></span></li>
+  </ul></div>
+  <div><h3>Child star years</h3><ul>
+   <li><i>2018</i><span>Mary, Marry Me</span></li>
+   <li><i>2017</i><span>Ilawod<em>as Bea</em></span></li>
+   <li><i>2015</i><span>Pangil sa Tubig<em>as Fatima</em></span></li>
+   <li><i>2014</i><span>Hawak Kamay<em>TV · Windy</em></span></li>
+   <li><i>2013</i><span>Girl, Boy, Bakla, Tomboy<em>as Cindy</em></span></li>
+   <li><i>2013</i><span>Four Sisters and a Wedding</span></li>
+   <li><i>2012</i><span>Sisterakas<em>as Cindy Maningas</em></span></li>
+   <li><i>2012</i><span>Amorosa: The Revenge<em>as Nadia</em></span></li>
+   <li><i>2012</i><span>Ikaw Lamang<em>TV</em></span></li>
+   <li><i>2011</i><span>Enteng ng Ina Mo<em>as Monay Montecillo</em></span></li>
+   <li><i>2011</i><span>100 Days to Heaven<em>TV · young Anna Manalastas</em></span></li>
+   <li><i>2010</i><span>Ang Tanging Ina Mo: Last Na 'To!<em>as Monay Montecillo</em></span></li>
+   <li><i>2010</i><span>Agua Bendita<em>TV · young Agua / Bendita</em></span></li>
+   <li><i>2010</i><span>Momay<em>TV · Miley "Momay" Buenavidez</em></span></li>
+  </ul></div>
+ </div>
+</div></section>
+
+<section id="gallery" class="strip" style="padding-bottom:30px"><div class="wrap"><h2>From the scrapbook</h2><p class="note">Real stills from her filmography, then and now. Swipe to scroll.</p><button class="ctl btn" data-act="addph">+ Add photos</button></div>
+ <div class="reel" tabindex="0" aria-label="Photo strip">
+  <figure><img src="images/agua-bendita-2010.jpeg" alt="Xyriel Manabat in Agua Bendita, 2010" loading="lazy"><figcaption><b>Agua Bendita</b>2010</figcaption><button class="ctl x" data-act="rm" aria-label="Remove">✕</button></figure>
+  <figure><img src="images/child-star-era.webp" alt="Xyriel Manabat during her child star era" loading="lazy"><figcaption><b>Child star era</b>2011–2012</figcaption><button class="ctl x" data-act="rm" aria-label="Remove">✕</button></figure>
+  <figure><img src="images/dirty-linen-2023.png" alt="Xyriel Manabat as Tonet in Dirty Linen" loading="lazy"><figcaption><b>Dirty Linen</b>2023</figcaption><button class="ctl x" data-act="rm" aria-label="Remove">✕</button></figure>
+  <figure><img src="images/18th-rose-2026.png" alt="18th Rose Netflix poster" loading="lazy"><figcaption><b>18th Rose</b>2026</figcaption><button class="ctl x" data-act="rm" aria-label="Remove">✕</button></figure>
+  <figure><img src="images/stuck-on-you-2026.jpeg" alt="Xyriel Manabat and River Joseph, Stuck On You" loading="lazy"><figcaption><b>Stuck On You</b>2026</figcaption><button class="ctl x" data-act="rm" aria-label="Remove">✕</button></figure>
+ </div>
+</section>
+
+<section id="projects" style="background:var(--ink2);border-block:1px solid var(--line)"><div class="wrap"><h2>Fan projects</h2><p class="note">Streaming parties, voting drives, fan art and more.</p><div class="show" id="fplist"><article class="card fp"><img src="data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27800%27 height=%27600%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%233a2a4d%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 fill=%27%23a595b8%27 font-size=%2734%27 font-family=%27sans-serif%27 text-anchor=%27middle%27%3ETap to add photo%3C/text%3E%3C/svg%3E" alt="Fan project"><div><span class="pill">Fan project</span><h3>Project title</h3><p>Describe the project: streaming party, voting drive, fan art, project for her birthday...</p><small><a href="#">Visit project →</a></small></div><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></article></div><p style="margin-top:20px"><button class="ctl btn" data-act="addp">+ Add project</button></p></div></section>
+
+<section id="fanpages"><div class="wrap"><h2>Fan pages</h2><p class="note">Fan-run accounts, not official. Follow and support them.</p><div class="soc" id="fglist"><div class="fpg"><a href="#"><b>Fan page name</b><small>@handle · Platform</small></a><button class="ctl x" data-act="rm" aria-label="Remove">✕</button><button class="ctl l" data-act="link" aria-label="Edit link">🔗</button></div></div><p style="margin-top:20px"><button class="ctl btn" data-act="addf">+ Add fan page</button></p></div></section>
+
+<footer><div class="wrap">Unofficial fan dossier. Not affiliated with Xyriel Manabat or her management.<br>Built by <b>Serene</b></div></footer>
+</div>
+
+<script>
+(function(){
+ var i=document.getElementById('intro');
+ function go(){i.classList.add('off')}
+ document.getElementById('skip').onclick=go;
+ setTimeout(go,2800);
+ try{if(sessionStorage.getItem('seen'))go();sessionStorage.setItem('seen','1')}catch(e){}
+})();
+</script>
+<button id="ebtn" class="btn">✎ Edit</button><input type="file" id="fi" accept="image/*" multiple hidden>
+<div id="lg" style="display:none;position:fixed;inset:0;z-index:120;background:#000c;place-items:center"><div style="background:#22162f;border:1px solid #3a2a4d;border-radius:14px;padding:20px;width:min(340px,90vw);font:15px system-ui,sans-serif;color:#f1e9f7"><b>Admin login</b><input id="le" type="email" autocomplete="username" placeholder="Email" style="width:100%;margin:8px 0;padding:10px;border-radius:8px;border:1px solid #3a2a4d;background:#120a1c;color:#fff;font:inherit"><input id="lp" type="password" autocomplete="current-password" placeholder="Password" style="width:100%;margin:8px 0;padding:10px;border-radius:8px;border:1px solid #3a2a4d;background:#120a1c;color:#fff;font:inherit"><div id="lm" style="color:#ffb3cf;min-height:20px"></div><button id="lo" class="btn">Login</button> <button id="lc" style="background:none;border:1px solid #3a2a4d;color:#a595b8;border-radius:99px;padding:8px 16px;font:inherit">Cancel</button></div></div>
+<div id="ep"><div class="r"><b id="pl">Tap any text to style it</b><label><input type="checkbox" id="sc"> apply to all like this</label><span id="st" style="color:#ffb3cf"></span><button id="dn">Done</button></div>
+<div class="r"><select id="ff"></select><input type="number" id="fz" min="8" max="160" style="width:66px">px <input type="color" id="fc"><button id="fb"><b>B</b></button></div>
+<details><summary>Theme (whole site)</summary><div class="r" id="th"></div><div class="r"><span class="t">Heading font<select id="hf"></select></span><span class="t">Body font<select id="bf"></select></span><span class="t">Base size<input type="range" id="bs" min="13" max="24" value="17"></span></div></details>
+<div class="r"><button id="ex">⬇ Backup HTML</button><button id="rs">Reset</button></div></div>
+<script>
+(function(){
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return[].slice.call((r||document).querySelectorAll(s))};
+var site=$('#site'),root=document.documentElement,B=document.body,cur=null,pick=null,K='xm_edit_v1',tm,warned;
+var T='h1,h2,h3,p,time,figcaption,small,.pill,.stats div,.soc b,nav a,nav b,footer .wrap,.note,.tag,.film li';
+var X='<button class="ctl x" data-act="rm" aria-label="Remove">✕</button>',L='<button class="ctl l" data-act="link" aria-label="Edit link">🔗</button>';
+var PH="data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27800%27 height=%27600%27%3E%3Crect width=%27100%25%27 height=%27100%25%27 fill=%27%233a2a4d%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 fill=%27%23a595b8%27 font-size=%2734%27 font-family=%27sans-serif%27 text-anchor=%27middle%27%3ETap to add photo%3C/text%3E%3C/svg%3E";
+var F=['Gloock','Outfit','Playfair Display','Poppins','Bebas Neue','Pacifico','Caveat','Space Grotesk','Montserrat'];
+function opts(el,def){el.innerHTML='<option value="">'+def+'</option>'+F.map(function(f){return'<option value="'+f+'">'+f+'</option>'}).join('')}
+opts($('#ff'),'Default font');opts($('#hf'),'Heading');opts($('#bf'),'Body');
+function snap(strip){var c=site.cloneNode(true);$$('[contenteditable]',c).forEach(function(e){e.removeAttribute('contenteditable')});$$('[data-sel]',c).forEach(function(e){e.removeAttribute('data-sel')});if(strip)$$('.ctl',c).forEach(function(e){e.remove()});return c.innerHTML}
+function setSt(t){var e=$('#st');if(e)e.textContent=t}
+function save(){clearTimeout(tm);setSt('Saving...');tm=setTimeout(function(){tk().then(function(){return fetch(U+'/rest/v1/site?id=eq.1',{method:'PATCH',headers:Object.assign(H(1),{'Content-Type':'application/json',Prefer:'return=minimal'}),body:JSON.stringify({html:snap(),vars:root.getAttribute('style')||''})})}).then(function(r){setSt(r.ok?'Saved ✓':'Save failed ('+r.status+')')}).catch(function(){setSt('Not logged in')})},1200)}
+var U='https://ntcdqdfhblmcgbypnkwk.supabase.co',KEY='sb_publishable_9mQYTiI4h0Nr2Sjb1qVJ6A_9W9Wojsk',SS='xm_sb',tok=null;
+function H(a){var h={apikey:KEY};if(a&&tok)h.Authorization='Bearer '+tok.access_token;return h}
+function auth(body,gt){return fetch(U+'/auth/v1/token?grant_type='+gt,{method:'POST',headers:{apikey:KEY,'Content-Type':'application/json'},body:JSON.stringify(body)}).then(function(r){return r.json().then(function(j){if(!r.ok)throw new Error(j.error_description||j.msg||'Login failed');j.exp=Date.now()+(j.expires_in-60)*1000;tok=j;try{localStorage.setItem(SS,JSON.stringify(j))}catch(e){}return j})})}
+function tk(){try{tok=JSON.parse(localStorage.getItem(SS)||'null')}catch(e){tok=null}if(!tok)return Promise.reject();if(Date.now()<tok.exp)return Promise.resolve();return auth({refresh_token:tok.refresh_token},'refresh_token')}
+function up(b,cb){tk().then(function(){var n=Date.now()+'-'+Math.random().toString(36).slice(2,7)+'.jpg';return fetch(U+'/storage/v1/object/photos/'+n,{method:'POST',headers:Object.assign(H(1),{'Content-Type':'image/jpeg'}),body:b}).then(function(r){if(!r.ok)throw new Error('upload '+r.status);cb(U+'/storage/v1/object/public/photos/'+n)})}).catch(function(e){alert('Upload failed: '+((e&&e.message)||'please log in again'))})}
+fetch(U+'/rest/v1/site?id=eq.1&select=html,vars',{headers:H()}).then(function(r){return r.json()}).then(function(a){var d=a&&a[0];if(d&&d.html){site.innerHTML=d.html;if(d.vars)root.setAttribute('style',d.vars)}}).catch(function(){});
+function refresh(){if(B.classList.contains('ed'))$$(T,site).forEach(function(e){e.setAttribute('contenteditable','true')})}
+function setEd(on){B.classList.toggle('ed',on);if(on)refresh();else{$$('[contenteditable]',site).forEach(function(e){e.removeAttribute('contenteditable')});sel(null);save()}}
+$('#ebtn').onclick=function(){tk().then(function(){setEd(true)}).catch(function(){$('#lg').style.display='grid';$('#le').focus()})};
+$('#lc').onclick=function(){$('#lg').style.display='none'};
+$('#lo').onclick=function(){$('#lm').textContent='Logging in...';auth({email:$('#le').value.trim(),password:$('#lp').value},'password').then(function(){$('#lp').value='';$('#lm').textContent='';$('#lg').style.display='none';setEd(true)}).catch(function(e){$('#lm').textContent=(e&&e.message)||'Wrong email or password'})};$('#dn').onclick=function(){setEd(false)};
+function hex(c){var m=c.match(/\d+/g)||[0,0,0];return'#'+[0,1,2].map(function(i){return('0'+(+m[i]).toString(16)).slice(-2)}).join('')}
+function key(e){return e.classList.length?e.tagName.toLowerCase()+'.'+e.classList[0]:e.tagName.toLowerCase()}
+function sel(e){if(cur)cur.removeAttribute('data-sel');cur=e;if(!e)return;e.setAttribute('data-sel','');var cs=getComputedStyle(e);$('#pl').textContent='Editing: '+key(e);$('#fz').value=Math.round(parseFloat(cs.fontSize));$('#fc').value=hex(cs.color);var fam=cs.fontFamily.split(',')[0].replace(/["']/g,'').trim();$('#ff').value=F.indexOf(fam)>-1?fam:''}
+function ap(p,v){if(!cur)return;var els=$('#sc').checked?$$(key(cur),site):[cur];els.forEach(function(e){e.style[p]=v});save()}
+$('#ff').onchange=function(){ap('fontFamily',this.value?'"'+this.value+'",sans-serif':'')};
+$('#fz').oninput=function(){if(this.value)ap('fontSize',this.value+'px')};
+$('#fc').oninput=function(){ap('color',this.value)};
+$('#fb').onclick=function(){if(cur)ap('fontWeight',parseInt(getComputedStyle(cur).fontWeight)>=600?'300':'700')};
+document.addEventListener('focusin',function(e){if(!B.classList.contains('ed'))return;var t=e.target.closest&&e.target.closest(T);if(t&&site.contains(t))sel(t)});
+document.addEventListener('input',function(e){if(site.contains(e.target))save()});
+var th=$('#th');[['--rose','Accent'],['--rose2','Accent 2'],['--blue','Blue'],['--ink','Background'],['--ink2','Cards'],['--text','Text'],['--mute','Muted']].forEach(function(v){var l=document.createElement('label');l.className='t';l.innerHTML=v[1]+'<input type="color">';var i=l.firstElementChild||l.querySelector('input');i=l.querySelector('input');i.value=hex(getComputedStyle(root).getPropertyValue(v[0]).trim().length==7?(function(h){return'rgb('+parseInt(h.substr(1,2),16)+','+parseInt(h.substr(3,2),16)+','+parseInt(h.substr(5,2),16)+')'})(getComputedStyle(root).getPropertyValue(v[0]).trim()):'rgb(0,0,0)');i.oninput=function(){root.style.setProperty(v[0],i.value);save()};th.appendChild(l)});
+$('#hf').onchange=function(){root.style.setProperty('--serif',this.value?'"'+this.value+'",Georgia,serif':"'Gloock',Georgia,serif");save()};
+$('#bf').onchange=function(){root.style.setProperty('--sans',this.value?'"'+this.value+'",system-ui,sans-serif':"'Outfit',system-ui,sans-serif");save()};
+$('#bs').oninput=function(){root.style.setProperty('--fs',this.value+'px');save()};
+var fi=$('#fi');
+function rd(f,cb){var r=new FileReader();r.onload=function(){var i=new Image();i.onload=function(){var s=Math.min(1,1000/Math.max(i.width,i.height)),c=document.createElement('canvas');c.width=i.width*s;c.height=i.height*s;c.getContext('2d').drawImage(i,0,0,c.width,c.height);c.toBlob(function(b){up(b,cb)},'image/jpeg',.82)};i.src=r.result};r.readAsDataURL(f)}
+fi.onchange=function(){var fs=[].slice.call(fi.files);fi.value='';if(!fs.length)return;
+ if(pick==='add'){fs.forEach(function(f){rd(f,function(u){var g=document.createElement('figure');g.innerHTML='<img src="'+u+'" alt="Fan photo"><figcaption><b>Caption</b>Year</figcaption>'+X;var r=$('.reel',site);r.appendChild(g);r.scrollLeft=r.scrollWidth;refresh();save()})})}
+ else if(pick)rd(fs[0],function(u){pick.src=u;save()})};
+function addTo(sel,html,tag,cls){var d=document.createElement(tag);d.className=cls;d.innerHTML=html;$(sel,site).appendChild(d);refresh();save();d.scrollIntoView({block:'center'})}
+document.addEventListener('click',function(e){if(!B.classList.contains('ed')||!site.contains(e.target))return;var t=e.target;
+ if(t.closest('a')&&!t.closest('.ctl'))e.preventDefault();
+ var b=t.closest('.ctl');
+ if(b){var a=b.dataset.act,it=b.closest('.fp,.fpg,figure,.upd,.ann');
+  if(a==='rm'&&confirm('Remove this?')){it.remove();save()}
+  else if(a==='link'){var k=$('a',it),u=prompt('Link (https://...)',k.getAttribute('href'));if(u!==null){k.setAttribute('href',u);if(u&&u!=='#'){k.target='_blank';k.rel='noopener'}save()}}
+  else if(a==='addph'){pick='add';fi.multiple=true;fi.click()}
+  else if(a==='addp')addTo('#fplist','<img src="'+PH+'" alt="Fan project"><div><span class="pill">Fan project</span><h3>Project title</h3><p>Describe the project.</p><small><a href="#">Visit project →</a></small></div>'+X+L,'article','card fp');
+  else if(a==='addu')addTo('#ulist','<time>Date</time><h3>Update title</h3><p>What is new?</p><small><a href="#">Source →</a></small>'+X+L,'article','upd');
+  else if(a==='adda')addTo('#alist','<time>Date</time><h3>Announcement title</h3><p>Write the announcement.</p>'+X,'article','ann');
+  else if(a==='addf')addTo('#fglist','<a href="#"><b>Fan page name</b><small>@handle · Platform</small></a>'+X+L,'div','fpg');
+  return}
+ if(t.tagName==='IMG'){pick=t;fi.multiple=false;fi.click()}
+},true);
+$('#ex').onclick=function(){var d=root.cloneNode(true);$('#site',d).innerHTML=snap(true);var o=$('#intro',d);if(o)o.classList.remove('off');B.classList.remove('ed');var h='<!DOCTYPE html>\n'+d.outerHTML,a=document.createElement('a');a.href=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.download='index.html';a.click()};
+$('#rs').onclick=function(){if(confirm('Reset the site back to the original design for everyone?')){tk().then(function(){return fetch(U+'/rest/v1/site?id=eq.1',{method:'PATCH',headers:Object.assign(H(1),{'Content-Type':'application/json'}),body:JSON.stringify({html:'',vars:''})})}).then(function(){location.reload()}).catch(function(){alert('Log in first')})}};
+})();
+</script>
+</body>
+</html>
